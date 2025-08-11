@@ -206,6 +206,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="forms\contact.php" />
+    <Content Include="forms\newsletter.php" />
+    <Content Include="forms\tour-booking.php" />
     <Content Include="assets\img\blog\blog-hero-1.webp" />
     <Content Include="assets\img\blog\blog-hero-2.webp" />
     <Content Include="assets\img\blog\blog-post-1.webp" />
@@ -258,7 +261,7 @@
     <Content Include="assets\img\travel\destination-4.webp" />
     <Content Include="assets\img\travel\destination-5.webp" />
     <Content Include="assets\img\travel\destination-6.webp" />
-    <Content Include="assets\img\travel\destination-7.webp" />
+    <Content Include="assets\img\travel\destination-7.png" />
     <Content Include="assets\img\travel\destination-8.webp" />
     <Content Include="assets\img\travel\destination-9.webp" />
     <Content Include="assets\img\travel\misc-12.webp" />
@@ -317,9 +320,6 @@
     <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="assets\vendor\purecounter\purecounter_vanilla.js.map" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js.map" />
-    <Content Include="forms\contact.php" />
-    <Content Include="forms\newsletter.php" />
-    <Content Include="forms\tour-booking.php" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">

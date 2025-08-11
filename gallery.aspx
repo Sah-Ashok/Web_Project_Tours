@@ -84,7 +84,7 @@
                 <div class="gallery-item">
                   <div class="gallery-img">
                     <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.webp">
-                      <img src="aE:\C# practice\Web_Project_Tours\assets\img\gallery\gallery-1.webp" class="img-fluid" alt="">
+                      <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
