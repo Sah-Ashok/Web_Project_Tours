@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="404.html" />
+    <Content Include="404.aspx" />
     <Content Include="About.aspx" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
@@ -116,25 +116,31 @@
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
     <Content Include="blog-details.html" />
     <Content Include="blog.html" />
+    <Content Include="booking.aspx" />
     <Content Include="booking.html" />
-    <Content Include="contact.html" />
+    <Content Include="contact.aspx" />
     <Content Include="destination-details.html" />
     <Content Include="Destinations.aspx" />
-    <Content Include="destinations.html" />
     <Content Include="faq.html" />
     <Content Include="forms\Readme.txt" />
-    <Content Include="gallery.html" />
+    <Content Include="gallery.aspx" />
     <Content Include="index.aspx" />
     <Content Include="privacy.html" />
-    <Content Include="Readme.txt" />
     <Content Include="starter-page.html" />
     <Content Include="terms.html" />
     <Content Include="testimonials.html" />
-    <Content Include="tour-details.html" />
-    <Content Include="tours.html" />
+    <Content Include="tour-details.aspx" />
+    <Content Include="tours.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,12 +148,33 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Destinations.aspx.cs">
       <DependentUpon>Destinations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Destinations.aspx.designer.cs">
       <DependentUpon>Destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gallery.aspx.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gallery.aspx.designer.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -162,6 +189,20 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="tour-details.aspx.cs">
+      <DependentUpon>tour-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tour-details.aspx.designer.cs">
+      <DependentUpon>tour-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tours.aspx.cs">
+      <DependentUpon>tours.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tours.aspx.designer.cs">
+      <DependentUpon>tours.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -257,7 +257,7 @@
                     <span class="starting-from">Starting from</span>
                     <span class="amount">$2,150</span>
                   </div>
-                  <a href="destination-details.html" class="explore-btn">
+                  <a href="destination-details.aspx" class="explore-btn">
                     <span>Explore Now</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -284,7 +284,7 @@
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
                       <span class="price">from $1,420</span>
                     </div>
-                    <a href="destination-details.html" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
+                    <a href="destination-details.aspx" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -303,7 +303,7 @@
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
                       <span class="price">from $980</span>
                     </div>
-                    <a href="destination-details.html" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
+                    <a href="destination-details.aspx" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -323,7 +323,7 @@
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
                       <span class="price">from $2,750</span>
                     </div>
-                    <a href="destination-details.html" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
+                    <a href="destination-details.aspx" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -369,7 +369,7 @@
                   <span>Bora Bora</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -403,7 +403,7 @@
                   <span>Norway</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -437,7 +437,7 @@
                   <span>Dubai</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -471,7 +471,7 @@
                   <span>Italy</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -505,7 +505,7 @@
                   <span>Peru</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -539,7 +539,7 @@
                   <span>Ushuaia</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="booking.aspx" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -556,7 +556,7 @@
         </div>
 
         <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
-          <a href="tours.html" class="btn-view-all">View All Tours</a>
+          <a href="tours.aspx" class="btn-view-all">View All Tours</a>
         </div>
 
       </div>
@@ -690,11 +690,11 @@
 
             <div class="action-section">
               <div class="main-actions">
-                <a href="destinations.html" class="btn btn-explore">
+                <a href="destinations.aspx" class="btn btn-explore">
                   <i class="bi bi-compass"></i>
                   Explore Now
                 </a>
-                <a href="deals.html" class="btn btn-deals">
+                <a href="deals.aspx" class="btn btn-deals">
                   <i class="bi bi-percent"></i>
                   View Deals
                 </a>

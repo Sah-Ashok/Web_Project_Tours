@@ -10,7 +10,7 @@
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.aspx">Home</a></li>
             <li class="current">Destinations</li>
           </ol>
         </nav>
@@ -42,7 +42,7 @@
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-2.webp" alt="Maldives" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -61,7 +61,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-historical">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-4.webp" alt="Rome, Italy" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -80,7 +80,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-mountain">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-6.webp" alt="Swiss Alps" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -99,7 +99,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-8.webp" alt="Costa Rica" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -118,7 +118,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-urban">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-10.webp" alt="Dubai, UAE" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -137,7 +137,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-12.webp" alt="Amalfi Coast, Italy" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -156,7 +156,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-14.webp" alt="Thailand" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -175,7 +175,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-mountain">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-16.webp" alt="Nepal Himalayas" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -194,7 +194,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-historical">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-18.webp" alt="Egypt Pyramids" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
@@ -213,7 +213,7 @@
             </div><!-- End Destination Item -->
 
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-urban">
-              <a href="destination-details.html" class="destination-tile">
+              <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
                   <img src="assets/img/travel/destination-20.webp" alt="Singapore" class="img-fluid" loading="lazy">
                   <div class="overlay-content">

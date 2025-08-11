@@ -10,7 +10,7 @@
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.aspx">Home</a></li>
             <li class="current">About</li>
           </ol>
         </nav>
@@ -237,8 +237,8 @@
                   <h3>Your Next Adventure Awaits</h3>
                   <p>Join thousands of travelers who've discovered the difference authentic, responsible travel makes.</p>
                   <div class="cta-buttons">
-                    <a href="destinations.html" class="btn btn-primary me-3">Explore Destinations</a>
-                    <a href="contact.html" class="btn btn-outline">Chat with an Expert</a>
+                    <a href="destinations.aspx" class="btn btn-primary me-3">Explore Destinations</a>
+                    <a href="contact.aspx" class="btn btn-outline">Chat with an Expert</a>
                   </div>
                 </div>
               </div>
