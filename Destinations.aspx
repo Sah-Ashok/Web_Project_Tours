@@ -4,7 +4,7 @@
       <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
       <div class="container position-relative">
         <h1>Destinations</h1>
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -44,7 +44,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-2.webp" alt="Maldives" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-2.png" alt="Maldives" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag luxury">Elysian</span>
                     <div class="destination-info">
@@ -63,7 +63,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-historical">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-4.webp" alt="Rome, Italy" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-4.png" alt="Rome, Italy" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag cultural">Historic</span>
                     <div class="destination-info">
@@ -82,7 +82,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-mountain">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-6.webp" alt="Swiss Alps" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-6.png" alt="Swiss Alps" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag adventure">Alpine</span>
                     <div class="destination-info">
@@ -101,7 +101,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-8.webp" alt="Costa Rica" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-8.png" alt="Costa Rica" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag nature">Eco-Venture</span>
                     <div class="destination-info">
@@ -120,7 +120,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-urban">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-10.webp" alt="Dubai, UAE" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-10.png" alt="Dubai, UAE" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag modern">Cosmopolitan</span>
                     <div class="destination-info">
@@ -139,7 +139,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-12.webp" alt="Amalfi Coast, Italy" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-12.png" alt="Amalfi Coast, Italy" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag romantic">Enchanting</span>
                     <div class="destination-info">
@@ -158,7 +158,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-14.webp" alt="Thailand" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-14.png" alt="Thailand" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag popular">Vibrant</span>
                     <div class="destination-info">
@@ -177,7 +177,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-mountain">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-16.webp" alt="Nepal Himalayas" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-16.png" alt="Nepal Himalayas" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag trekking">Ascent</span>
                     <div class="destination-info">
@@ -196,7 +196,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-historical">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-18.webp" alt="Egypt Pyramids" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-18.png" alt="Egypt Pyramids" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag ancient">Timeless</span>
                     <div class="destination-info">
@@ -215,7 +215,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-urban">
               <a href="destination-details.aspx" class="destination-tile">
                 <div class="tile-image">
-                  <img src="assets/img/travel/destination-20.webp" alt="Singapore" class="img-fluid" loading="lazy">
+                  <img src="assets/img/travel/destination-20.png" alt="Singapore" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag family">Family-Friendly</span>
                     <div class="destination-info">

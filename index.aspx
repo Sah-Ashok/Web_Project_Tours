@@ -59,31 +59,7 @@
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group mb-3">
-                        <label for="adults">Adults</label>
-                        <select name="adults" id="adults" class="form-select" required="">
-                          <option value="1">1 Adult</option>
-                          <option value="2">2 Adults</option>
-                          <option value="3">3 Adults</option>
-                          <option value="4">4+ Adults</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group mb-3">
-                        <label for="children">Children</label>
-                        <select name="children" id="children" class="form-select">
-                          <option value="0">No Children</option>
-                          <option value="1">1 Child</option>
-                          <option value="2">2 Children</option>
-                          <option value="3">3+ Children</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
+                
                   <div class="form-group mb-3">
                     <label for="tour-type">Tour Type</label>
                     <select name="tour_type" id="tour-type" class="form-select" required="">
@@ -136,7 +112,7 @@
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-image">
-              <img src="assets/img/travel/showcase-8.webp" alt="Travel Experience" class="img-fluid rounded-4">
+              <img src="assets/img/travel/showcase-8.png" alt="Travel Experience" class="img-fluid rounded-4">
               <div class="experience-badge">
                 <div class="experience-number">15+</div>
                 <div class="experience-text">Years of Excellence</div>
@@ -237,7 +213,7 @@
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="featured-destination">
               <div class="destination-overlay">
-                <img src="assets/img/travel/destination-3.webp" alt="Tropical Paradise" class="img-fluid">
+                <img src="assets/img/travel/destination-3.png" alt="Tropical Paradise" class="img-fluid">
                 <div class="destination-info">
                   <span class="destination-tag">Popular Choice</span>
                   <h3>Tropical Paradise</h3>
@@ -272,7 +248,7 @@
               <div class="col-12" data-aos="fade-left" data-aos-delay="300">
                 <div class="compact-destination">
                   <div class="destination-image">
-                    <img src="assets/img/travel/destination-7.webp" alt="Mountain Adventure" class="img-fluid">
+                    <img src="assets/img/travel/destination-7.png" alt="Mountain Adventure" class="img-fluid">
                     <div class="badge-offer">Best Value</div>
                   </div>
                   <div class="destination-details">
@@ -292,7 +268,7 @@
               <div class="col-12" data-aos="fade-left" data-aos-delay="400">
                 <div class="compact-destination">
                   <div class="destination-image">
-                    <img src="assets/img/travel/destination-11.webp" alt="Cultural Heritage" class="img-fluid">
+                    <img src="assets/img/travel/destination-11.png" alt="Cultural Heritage" class="img-fluid">
                   </div>
                   <div class="destination-details">
                     <h4>Cultural Heritage</h4>
@@ -311,7 +287,7 @@
               <div class="col-12" data-aos="fade-left" data-aos-delay="500">
                 <div class="compact-destination">
                   <div class="destination-image">
-                    <img src="assets/img/travel/destination-16.webp" alt="Safari Experience" class="img-fluid">
+                    <img src="assets/img/travel/destination-16.png" alt="Safari Experience" class="img-fluid">
                     <div class="badge-offer limited">Limited Spots</div>
                   </div>
                   <div class="destination-details">
@@ -352,7 +328,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-1.webp" alt="Serene Beach Retreat" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-1.png" alt="Serene Beach Retreat" class="img-fluid" loading="lazy">
                 <div class="tour-badge">Top Rated</div>
                 <div class="tour-price">$2,150</div>
               </div>
@@ -386,7 +362,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-2.webp" alt="Arctic Expedition" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-2.png" alt="Arctic Expedition" class="img-fluid" loading="lazy">
                 <div class="tour-badge limited">Only 3 Spots!</div>
                 <div class="tour-price">$5,700</div>
               </div>
@@ -420,7 +396,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-4.webp" alt="Desert Safari" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-4.png" alt="Desert Safari" class="img-fluid" loading="lazy">
                 <div class="tour-badge new">Newly Added</div>
                 <div class="tour-price">$1,400</div>
               </div>
@@ -454,7 +430,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-5.webp" alt="Coastal Explorer" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-5.png" alt="Coastal Explorer" class="img-fluid" loading="lazy">
                 <div class="tour-badge">Popular Choice</div>
                 <div class="tour-price">$1,980</div>
               </div>
@@ -488,7 +464,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-6.webp" alt="Rainforest Trek" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-6.png" alt="Rainforest Trek" class="img-fluid" loading="lazy">
                 <div class="tour-badge cultural">Eco-Friendly</div>
                 <div class="tour-price">$2,650</div>
               </div>
@@ -522,7 +498,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="tour-card">
               <div class="tour-image">
-                <img src="assets/img/travel/tour-8.webp" alt="Patagonian Peaks" class="img-fluid" loading="lazy">
+                <img src="assets/img/travel/tour-8.png" alt="Patagonian Peaks" class="img-fluid" loading="lazy">
                 <div class="tour-badge adventure">Adventure Seekers</div>
                 <div class="tour-price">$3,950</div>
               </div>
@@ -609,7 +585,7 @@
                   <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
+                <img src="assets/img/person/person-m-9.png" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
@@ -622,7 +598,7 @@
                   <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
+                <img src="assets/img/person/person-f-5.png" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
@@ -635,7 +611,7 @@
                   <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
+                <img src="assets/img/person/person-f-12.png" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
@@ -648,7 +624,7 @@
                   <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
+                <img src="assets/img/person/person-m-12.png" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
@@ -661,7 +637,7 @@
                   <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
+                <img src="assets/img/person/person-m-13.png" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -711,7 +687,7 @@
           </div>
 
           <div class="visual-element">
-            <img src="assets/img/travel/showcase-3.webp" alt="Travel Adventure" class="hero-image" loading="lazy">
+            <img src="assets/img/travel/showcase-3.png" alt="Travel Adventure" class="hero-image" loading="lazy">
             <div class="image-overlay">
               <div class="stat-item">
                 <span class="stat-number">500+</span>

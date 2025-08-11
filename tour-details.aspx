@@ -5,7 +5,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
       <div class="container position-relative">
         <h1>Tour Details</h1>
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -26,7 +26,7 @@
         <!-- Hero Section -->
         <div class="tour-hero">
           <div class="hero-image-wrapper">
-            <img src="assets/img/travel/showcase-9.webp" alt="Mediterranean Adventure Tour" class="img-fluid w-100">
+            <img src="assets/img/travel/showcase-9.png" alt="Mediterranean Adventure Tour" class="img-fluid w-100">
             <div class="hero-overlay">
               <div class="hero-content">
                 <h1>Mediterranean Adventure</h1>
@@ -335,33 +335,33 @@
           <h2>Photo Gallery</h2>
           <div class="gallery-grid">
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-1.webp" class="glightbox">
-                <img src="assets/img/travel/destination-1.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-1.png" class="glightbox">
+                <img src="assets/img/travel/destination-1.png" alt="Venice Canals" class="img-fluid" loading="lazy">
               </a>
             </div>
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-2.webp" class="glightbox">
-                <img src="assets/img/travel/destination-2.webp" alt="Florence Cathedral" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-2.png" class="glightbox">
+                <img src="assets/img/travel/destination-2.png" alt="Florence Cathedral" class="img-fluid" loading="lazy">
               </a>
             </div>
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-3.webp" class="glightbox">
-                <img src="assets/img/travel/destination-3.webp" alt="Roman Colosseum" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-3.png" class="glightbox">
+                <img src="assets/img/travel/destination-3.png" alt="Roman Colosseum" class="img-fluid" loading="lazy">
               </a>
             </div>
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-4.webp" class="glightbox">
-                <img src="assets/img/travel/destination-4.webp" alt="Santorini Sunset" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-4.png" class="glightbox">
+                <img src="assets/img/travel/destination-4.png" alt="Santorini Sunset" class="img-fluid" loading="lazy">
               </a>
             </div>
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-5.webp" class="glightbox">
-                <img src="assets/img/travel/destination-5.webp" alt="Hagia Sophia" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-5.png" class="glightbox">
+                <img src="assets/img/travel/destination-5.png" alt="Hagia Sophia" class="img-fluid" loading="lazy">
               </a>
             </div>
             <div class="gallery-item">
-              <a href="assets/img/travel/destination-6.webp" class="glightbox">
-                <img src="assets/img/travel/destination-6.webp" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+              <a href="assets/img/travel/destination-6.png" class="glightbox">
+                <img src="assets/img/travel/destination-6.png" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
               </a>
             </div>
           </div>

@@ -4,7 +4,7 @@
       <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
       <div class="container position-relative">
         <h1>About</h1>
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -34,7 +34,7 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
             <div class="hero-image">
-              <img src="assets/img/travel/showcase-7.webp" class="img-fluid" alt="Travel Adventure">
+              <img src="assets/img/travel/showcase-7.png" class="img-fluid" alt="Travel Adventure">
               <div class="floating-stats">
                 <div class="stat-item">
                   <span class="number">50+</span>

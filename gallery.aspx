@@ -4,7 +4,7 @@
       <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
       <div class="container position-relative">
         <h1>Gallery</h1>
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -71,8 +71,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.webp">
-                      <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.png">
+                      <img src="assets/img/gallery/gallery-3.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -83,8 +83,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.webp">
-                      <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.png">
+                      <img src="assets/img/gallery/gallery-1.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -95,8 +95,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.webp">
-                      <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.png">
+                      <img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -107,8 +107,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.webp">
-                      <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.png">
+                      <img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -119,8 +119,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.webp">
-                      <img src="assets/img/gallery/gallery-2.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.png">
+                      <img src="assets/img/gallery/gallery-2.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -131,8 +131,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.webp">
-                      <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.png">
+                      <img src="assets/img/gallery/gallery-4.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -143,8 +143,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.webp">
-                      <img src="assets/img/gallery/gallery-6.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.png">
+                      <img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -155,8 +155,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.webp">
-                      <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" alt="">
+                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.png">
+                      <img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt="">
                       <div class="gallery-overlay">
                         <i class="bi bi-plus-circle"></i>
                       </div>
@@ -193,13 +193,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-1.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Natural Beauty</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-1.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-1.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -209,13 +209,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-2.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-2.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Urban Landscape</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-2.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-2.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -225,13 +225,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-3.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Candid Moments</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-3.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-3.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -241,13 +241,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-4.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Wilderness</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-4.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-4.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -257,13 +257,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Modern Design</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-5.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-5.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -273,13 +273,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-6.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Portrait Studies</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-6.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-6.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -289,13 +289,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Serene Waters</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-7.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-7.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
@@ -305,13 +305,13 @@
             <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
               <div class="gallery-card">
                 <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt="">
                 </div>
                 <div class="gallery-overlay">
                   <h4>Historical Places</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-8.webp" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                    <a href="assets/img/gallery/gallery-8.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
                     <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>

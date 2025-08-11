@@ -69,9 +69,66 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="About.aspx" />
+    <Content Include="App_Data\ToursTravels.mdf" />
+    <Content Include="App_Data\ToursTravels_log.ldf">
+      <DependentUpon>ToursTravels.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\css\main.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\dummy travel\destination-7.png" />
+    <Content Include="assets\img\dummy travel\video-2.mp4" />
     <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\person\person-f-10.png" />
+    <Content Include="assets\img\person\person-f-12.png" />
+    <Content Include="assets\img\person\person-f-13.png" />
+    <Content Include="assets\img\person\person-f-14.png" />
+    <Content Include="assets\img\person\person-f-15.png" />
+    <Content Include="assets\img\person\person-f-5.png" />
+    <Content Include="assets\img\person\person-f-7.png" />
+    <Content Include="assets\img\person\person-f-8.png" />
+    <Content Include="assets\img\person\person-f-9.png" />
+    <Content Include="assets\img\person\person-m-6.png" />
+    <Content Include="assets\img\person\person-m-8.png" />
+    <Content Include="assets\img\person\person-m-9.png" />
+    <Content Include="assets\img\travel\destination-1.png" />
+    <Content Include="assets\img\travel\destination-11.png" />
+    <Content Include="assets\img\travel\destination-12.png" />
+    <Content Include="assets\img\travel\destination-14.png" />
+    <Content Include="assets\img\travel\destination-15.png" />
+    <Content Include="assets\img\travel\destination-16.png" />
+    <Content Include="assets\img\travel\destination-18.png" />
+    <Content Include="assets\img\travel\destination-2.png" />
+    <Content Include="assets\img\travel\destination-20.png" />
+    <Content Include="assets\img\travel\destination-3.png" />
+    <Content Include="assets\img\travel\destination-4.png" />
+    <Content Include="assets\img\travel\destination-5.png" />
+    <Content Include="assets\img\travel\misc-12.png" />
+    <Content Include="assets\img\travel\misc-15.png" />
+    <Content Include="assets\img\travel\misc-3.png" />
+    <Content Include="assets\img\travel\misc-5 %281%29.png" />
+    <Content Include="assets\img\travel\misc-5.png" />
+    <Content Include="assets\img\travel\misc-8.png" />
+    <Content Include="assets\img\travel\showcase-3.png" />
+    <Content Include="assets\img\travel\showcase-7.png" />
+    <Content Include="assets\img\travel\showcase-8.png" />
+    <Content Include="assets\img\travel\showcase-9.png" />
+    <Content Include="assets\img\travel\tour-1.png" />
+    <Content Include="assets\img\travel\tour-11.png" />
+    <Content Include="assets\img\travel\tour-12.png" />
+    <Content Include="assets\img\travel\tour-13.png" />
+    <Content Include="assets\img\travel\tour-14.png" />
+    <Content Include="assets\img\travel\tour-15.png" />
+    <Content Include="assets\img\travel\tour-18.png" />
+    <Content Include="assets\img\travel\tour-19.png" />
+    <Content Include="assets\img\travel\tour-2.png" />
+    <Content Include="assets\img\travel\tour-22.png" />
+    <Content Include="assets\img\travel\tour-25.png" />
+    <Content Include="assets\img\travel\tour-26.png" />
+    <Content Include="assets\img\travel\tour-4.png" />
+    <Content Include="assets\img\travel\tour-5.png" />
+    <Content Include="assets\img\travel\tour-6.png" />
+    <Content Include="assets\img\travel\tour-7.png" />
+    <Content Include="assets\img\travel\tour-8.png" />
     <Content Include="assets\img\travel\video-2.mp4" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\scss\Readme.txt" />
@@ -114,21 +171,18 @@
     <Content Include="assets\vendor\purecounter\purecounter_vanilla.js" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
-    <Content Include="blog-details.html" />
-    <Content Include="blog.html" />
     <Content Include="booking.aspx" />
-    <Content Include="booking.html" />
     <Content Include="contact.aspx" />
-    <Content Include="destination-details.html" />
+    <Content Include="destination-details.aspx" />
     <Content Include="Destinations.aspx" />
-    <Content Include="faq.html" />
     <Content Include="forms\Readme.txt" />
     <Content Include="gallery.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="privacy.html" />
-    <Content Include="starter-page.html" />
-    <Content Include="terms.html" />
-    <Content Include="testimonials.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="privacy.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="sign-up.aspx" />
+    <Content Include="terms.aspx" />
     <Content Include="tour-details.aspx" />
     <Content Include="tours.aspx" />
     <Content Include="Web.config" />
@@ -162,6 +216,14 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="destination-details.aspx.cs">
+      <DependentUpon>destination-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="destination-details.aspx.designer.cs">
+      <DependentUpon>destination-details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Destinations.aspx.cs">
       <DependentUpon>Destinations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,12 +245,48 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy.aspx.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy.aspx.designer.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sign-up.aspx.cs">
+      <DependentUpon>sign-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sign-up.aspx.designer.cs">
+      <DependentUpon>sign-up.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="terms.aspx.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terms.aspx.designer.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
     </Compile>
     <Compile Include="tour-details.aspx.cs">
       <DependentUpon>tour-details.aspx</DependentUpon>
@@ -220,6 +318,66 @@
     <Content Include="assets\img\blog\blog-post-9.webp" />
     <Content Include="assets\img\blog\blog-post-portrait-1.webp" />
     <Content Include="assets\img\blog\blog-post-portrait-2.webp" />
+    <Content Include="assets\img\dummy person\person-f-10.webp" />
+    <Content Include="assets\img\dummy person\person-f-12.webp" />
+    <Content Include="assets\img\dummy person\person-f-13.webp" />
+    <Content Include="assets\img\dummy person\person-f-14.webp" />
+    <Content Include="assets\img\dummy person\person-f-15.webp" />
+    <Content Include="assets\img\dummy person\person-f-5.webp" />
+    <Content Include="assets\img\dummy person\person-f-7.webp" />
+    <Content Include="assets\img\dummy person\person-f-8.webp" />
+    <Content Include="assets\img\dummy person\person-f-9.webp" />
+    <Content Include="assets\img\dummy person\person-m-10.webp" />
+    <Content Include="assets\img\dummy person\person-m-11.webp" />
+    <Content Include="assets\img\dummy person\person-m-12.webp" />
+    <Content Include="assets\img\dummy person\person-m-13.webp" />
+    <Content Include="assets\img\dummy person\person-m-6.webp" />
+    <Content Include="assets\img\dummy person\person-m-7.webp" />
+    <Content Include="assets\img\dummy person\person-m-8.webp" />
+    <Content Include="assets\img\dummy person\person-m-9.webp" />
+    <Content Include="assets\img\dummy travel\destination-1.webp" />
+    <Content Include="assets\img\dummy travel\destination-10.webp" />
+    <Content Include="assets\img\dummy travel\destination-11.webp" />
+    <Content Include="assets\img\dummy travel\destination-12.webp" />
+    <Content Include="assets\img\dummy travel\destination-14.webp" />
+    <Content Include="assets\img\dummy travel\destination-15.webp" />
+    <Content Include="assets\img\dummy travel\destination-16.webp" />
+    <Content Include="assets\img\dummy travel\destination-18.webp" />
+    <Content Include="assets\img\dummy travel\destination-2.webp" />
+    <Content Include="assets\img\dummy travel\destination-20.webp" />
+    <Content Include="assets\img\dummy travel\destination-3.webp" />
+    <Content Include="assets\img\dummy travel\destination-4.webp" />
+    <Content Include="assets\img\dummy travel\destination-5.webp" />
+    <Content Include="assets\img\dummy travel\destination-6.webp" />
+    <Content Include="assets\img\dummy travel\destination-8.webp" />
+    <Content Include="assets\img\dummy travel\destination-9.webp" />
+    <Content Include="assets\img\dummy travel\misc-12.webp" />
+    <Content Include="assets\img\dummy travel\misc-15.webp" />
+    <Content Include="assets\img\dummy travel\misc-3.webp" />
+    <Content Include="assets\img\dummy travel\misc-5.webp" />
+    <Content Include="assets\img\dummy travel\misc-8.webp" />
+    <Content Include="assets\img\dummy travel\showcase-3.webp" />
+    <Content Include="assets\img\dummy travel\showcase-7.webp" />
+    <Content Include="assets\img\dummy travel\showcase-8.webp" />
+    <Content Include="assets\img\dummy travel\showcase-9.webp" />
+    <Content Include="assets\img\dummy travel\tour-1.webp" />
+    <Content Include="assets\img\dummy travel\tour-11.webp" />
+    <Content Include="assets\img\dummy travel\tour-12.webp" />
+    <Content Include="assets\img\dummy travel\tour-13.webp" />
+    <Content Include="assets\img\dummy travel\tour-14.webp" />
+    <Content Include="assets\img\dummy travel\tour-15.webp" />
+    <Content Include="assets\img\dummy travel\tour-18.webp" />
+    <Content Include="assets\img\dummy travel\tour-19.webp" />
+    <Content Include="assets\img\dummy travel\tour-2.webp" />
+    <Content Include="assets\img\dummy travel\tour-22.webp" />
+    <Content Include="assets\img\dummy travel\tour-25.webp" />
+    <Content Include="assets\img\dummy travel\tour-26.webp" />
+    <Content Include="assets\img\dummy travel\tour-3.webp" />
+    <Content Include="assets\img\dummy travel\tour-4.webp" />
+    <Content Include="assets\img\dummy travel\tour-5.webp" />
+    <Content Include="assets\img\dummy travel\tour-6.webp" />
+    <Content Include="assets\img\dummy travel\tour-7.webp" />
+    <Content Include="assets\img\dummy travel\tour-8.webp" />
     <Content Include="assets\img\gallery\gallery-1.webp" />
     <Content Include="assets\img\gallery\gallery-2.webp" />
     <Content Include="assets\img\gallery\gallery-3.webp" />
@@ -230,67 +388,6 @@
     <Content Include="assets\img\gallery\gallery-8.webp" />
     <Content Include="assets\img\illustration\illustration-5.webp" />
     <Content Include="assets\img\logo.webp" />
-    <Content Include="assets\img\person\person-f-10.webp" />
-    <Content Include="assets\img\person\person-f-12.webp" />
-    <Content Include="assets\img\person\person-f-13.webp" />
-    <Content Include="assets\img\person\person-f-14.webp" />
-    <Content Include="assets\img\person\person-f-15.webp" />
-    <Content Include="assets\img\person\person-f-5.webp" />
-    <Content Include="assets\img\person\person-f-7.webp" />
-    <Content Include="assets\img\person\person-f-8.webp" />
-    <Content Include="assets\img\person\person-f-9.webp" />
-    <Content Include="assets\img\person\person-m-10.webp" />
-    <Content Include="assets\img\person\person-m-11.webp" />
-    <Content Include="assets\img\person\person-m-12.webp" />
-    <Content Include="assets\img\person\person-m-13.webp" />
-    <Content Include="assets\img\person\person-m-6.webp" />
-    <Content Include="assets\img\person\person-m-7.webp" />
-    <Content Include="assets\img\person\person-m-8.webp" />
-    <Content Include="assets\img\person\person-m-9.webp" />
-    <Content Include="assets\img\travel\destination-1.webp" />
-    <Content Include="assets\img\travel\destination-10.webp" />
-    <Content Include="assets\img\travel\destination-11.webp" />
-    <Content Include="assets\img\travel\destination-12.webp" />
-    <Content Include="assets\img\travel\destination-14.webp" />
-    <Content Include="assets\img\travel\destination-15.webp" />
-    <Content Include="assets\img\travel\destination-16.webp" />
-    <Content Include="assets\img\travel\destination-18.webp" />
-    <Content Include="assets\img\travel\destination-2.webp" />
-    <Content Include="assets\img\travel\destination-20.webp" />
-    <Content Include="assets\img\travel\destination-3.webp" />
-    <Content Include="assets\img\travel\destination-4.webp" />
-    <Content Include="assets\img\travel\destination-5.webp" />
-    <Content Include="assets\img\travel\destination-6.webp" />
-    <Content Include="assets\img\travel\destination-7.png" />
-    <Content Include="assets\img\travel\destination-8.webp" />
-    <Content Include="assets\img\travel\destination-9.webp" />
-    <Content Include="assets\img\travel\misc-12.webp" />
-    <Content Include="assets\img\travel\misc-15.webp" />
-    <Content Include="assets\img\travel\misc-3.webp" />
-    <Content Include="assets\img\travel\misc-5.webp" />
-    <Content Include="assets\img\travel\misc-8.webp" />
-    <Content Include="assets\img\travel\showcase-3.webp" />
-    <Content Include="assets\img\travel\showcase-7.webp" />
-    <Content Include="assets\img\travel\showcase-8.webp" />
-    <Content Include="assets\img\travel\showcase-9.webp" />
-    <Content Include="assets\img\travel\tour-1.webp" />
-    <Content Include="assets\img\travel\tour-11.webp" />
-    <Content Include="assets\img\travel\tour-12.webp" />
-    <Content Include="assets\img\travel\tour-13.webp" />
-    <Content Include="assets\img\travel\tour-14.webp" />
-    <Content Include="assets\img\travel\tour-15.webp" />
-    <Content Include="assets\img\travel\tour-18.webp" />
-    <Content Include="assets\img\travel\tour-19.webp" />
-    <Content Include="assets\img\travel\tour-2.webp" />
-    <Content Include="assets\img\travel\tour-22.webp" />
-    <Content Include="assets\img\travel\tour-25.webp" />
-    <Content Include="assets\img\travel\tour-26.webp" />
-    <Content Include="assets\img\travel\tour-3.webp" />
-    <Content Include="assets\img\travel\tour-4.webp" />
-    <Content Include="assets\img\travel\tour-5.webp" />
-    <Content Include="assets\img\travel\tour-6.webp" />
-    <Content Include="assets\img\travel\tour-7.webp" />
-    <Content Include="assets\img\travel\tour-8.webp" />
     <Content Include="assets\vendor\aos\aos.js.map" />
     <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.json" />
     <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.scss" />

@@ -4,7 +4,7 @@
      <main class="main">
 
    <!-- Page Title -->
-   <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+   <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
      <div class="container position-relative">
        <h1>Tours</h1>
        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -110,7 +110,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-15.webp" alt="Bali Adventure" class="img-fluid">
+                     <img src="assets/img/travel/tour-15.png" alt="Bali Adventure" class="img-fluid">
                      <div class="tour-badge">Best Seller</div>
                    </div>
                    <div class="tour-content">
@@ -127,7 +127,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-22.webp" alt="Paris Romance" class="img-fluid">
+                     <img src="assets/img/travel/tour-22.png" alt="Paris Romance" class="img-fluid">
                      <div class="tour-badge">Luxury</div>
                    </div>
                    <div class="tour-content">
@@ -144,7 +144,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-8.webp" alt="Tokyo Culture" class="img-fluid">
+                     <img src="assets/img/travel/tour-8.png" alt="Tokyo Culture" class="img-fluid">
                      <div class="tour-badge">New</div>
                    </div>
                    <div class="tour-content">
@@ -161,7 +161,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-14.webp" alt="Norwegian Fjords" class="img-fluid">
+                     <img src="assets/img/travel/tour-14.png" alt="Norwegian Fjords" class="img-fluid">
                      <div class="tour-badge">Popular</div>
                    </div>
                    <div class="tour-content">
@@ -178,7 +178,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-7.webp" alt="Egyptian Adventure" class="img-fluid">
+                     <img src="assets/img/travel/tour-7.png" alt="Egyptian Adventure" class="img-fluid">
                      <div class="tour-badge">Cultural</div>
                    </div>
                    <div class="tour-content">
@@ -195,7 +195,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-19.webp" alt="Costa Rica Adventure" class="img-fluid">
+                     <img src="assets/img/travel/tour-19.png" alt="Costa Rica Adventure" class="img-fluid">
                      <div class="tour-badge">Adventure</div>
                    </div>
                    <div class="tour-content">
@@ -212,7 +212,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-2.webp" alt="Greek Islands" class="img-fluid">
+                     <img src="assets/img/travel/tour-2.png" alt="Greek Islands" class="img-fluid">
                      <div class="tour-badge">Summer Special</div>
                    </div>
                    <div class="tour-content">
@@ -229,7 +229,7 @@
                <div class="swiper-slide">
                  <div class="featured-tour-card">
                    <div class="tour-image">
-                     <img src="assets/img/travel/tour-25.webp" alt="Patagonia Trek" class="img-fluid">
+                     <img src="assets/img/travel/tour-25.png" alt="Patagonia Trek" class="img-fluid">
                      <div class="tour-badge">Extreme</div>
                    </div>
                    <div class="tour-content">
@@ -322,7 +322,7 @@
                      <a href="booking.aspx" class="btn btn-accent">Book Now</a>
                    </div>
                    <div class="offer-image">
-                     <img src="assets/img/travel/misc-12.webp" alt="Cruise" class="img-fluid">
+                     <img src="assets/img/travel/misc-12.png" alt="Cruise" class="img-fluid">
                    </div>
                  </div>
                </div>
@@ -336,7 +336,7 @@
                      <a href="booking.aspx" class="btn btn-accent">Book Now</a>
                    </div>
                    <div class="offer-image">
-                     <img src="assets/img/travel/misc-8.webp" alt="Safari" class="img-fluid">
+                     <img src="assets/img/travel/misc-8.png" alt="Safari" class="img-fluid">
                    </div>
                  </div>
                </div>
@@ -353,7 +353,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-3.webp" alt="Swiss Alps" class="img-fluid">
+                   <img src="assets/img/travel/tour-3.png" alt="Swiss Alps" class="img-fluid">
                    <div class="tour-price">$749</div>
                  </div>
                  <div class="tour-content">
@@ -370,7 +370,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-11.webp" alt="Iceland" class="img-fluid">
+                   <img src="assets/img/travel/tour-11.png" alt="Iceland" class="img-fluid">
                    <div class="tour-price">$1199</div>
                  </div>
                  <div class="tour-content">
@@ -387,7 +387,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-18.webp" alt="Morocco" class="img-fluid">
+                   <img src="assets/img/travel/tour-18.png" alt="Morocco" class="img-fluid">
                    <div class="tour-price">$899</div>
                  </div>
                  <div class="tour-content">
@@ -404,7 +404,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-5.webp" alt="Peru" class="img-fluid">
+                   <img src="assets/img/travel/tour-5.png" alt="Peru" class="img-fluid">
                    <div class="tour-price">$1399</div>
                  </div>
                  <div class="tour-content">
@@ -421,7 +421,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-26.webp" alt="Vietnam" class="img-fluid">
+                   <img src="assets/img/travel/tour-26.png" alt="Vietnam" class="img-fluid">
                    <div class="tour-price">$679</div>
                  </div>
                  <div class="tour-content">
@@ -438,7 +438,7 @@
              <div class="col-lg-4 col-md-6 mb-4">
                <div class="tour-card">
                  <div class="tour-image">
-                   <img src="assets/img/travel/tour-13.webp" alt="Australia" class="img-fluid">
+                   <img src="assets/img/travel/tour-13.png" alt="Australia" class="img-fluid">
                    <div class="tour-price">$1799</div>
                  </div>
                  <div class="tour-content">
