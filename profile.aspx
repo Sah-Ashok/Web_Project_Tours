@@ -10,7 +10,7 @@
         .profile-section {
             display: flex;
             align-items: center; /* vertical center */
-            justify-content: center; /* horizontal center */
+            justify-content: center 
           
         }
 
