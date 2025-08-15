@@ -1,331 +1,106 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="gallery.aspx.cs" Inherits="Web_Project_Tours.gallery" %>
+﻿<%@ Page Title="Gallery" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="gallery.aspx.cs" Inherits="Web_Project_Tours.gallery" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-      <main class="main">
+<main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.png);">
-      <div class="container position-relative">
-        <h1>Gallery</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.aspx">Home</a></li>
-            <li class="current">Gallery</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style='background-image: url(assets/img/travel/showcase-8.png);'>
+        <div class="container position-relative">
+            <h1>Gallery</h1>
+            <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.aspx">Home</a></li>
+                    <li class="current">Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
     <!-- Gallery Slider Section -->
     <section id="gallery-slider" class="gallery-slider section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-container">
+                <div class="swiper init-swiper">
+                    <!-- Swiper Config JSON -->
+                    <script type="application/json" class="swiper-config">
+                        {
+                            "loop": true,
+                            "speed": 800,
+                            "autoplay": { "delay": 4000 },
+                            "effect": "coverflow",
+                            "grabCursor": true,
+                            "centeredSlides": true,
+                            "slidesPerView": "auto",
+                            "coverflowEffect": { "rotate": 50, "stretch": 0, "depth": 100, "modifier": 1, "slideShadows": true },
+                            "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
+                            "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" },
+                            "breakpoints": { "320": { "slidesPerView": 1, "spaceBetween": 10 }, "768": { "slidesPerView": 2, "spaceBetween": 20 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } }
+                        }
+                    </script>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="gallery-container">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 800,
-                "autoplay": {
-                  "delay": 4000
-                },
-                "effect": "coverflow",
-                "grabCursor": true,
-                "centeredSlides": true,
-                "slidesPerView": "auto",
-                "coverflowEffect": {
-                  "rotate": 50,
-                  "stretch": 0,
-                  "depth": 100,
-                  "modifier": 1,
-                  "slideShadows": true
-                },
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".swiper-button-next",
-                  "prevEl": ".swiper-button-prev"
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 10
-                  },
-                  "768": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 20
-                  },
-                  "1024": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 30
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.png">
-                      <img src="assets/img/gallery/gallery-3.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
+                    <div class="swiper-wrapper">
+                        <asp:Repeater ID="rptSlider" runat="server">
+                            <ItemTemplate>
+                                <div class="swiper-slide">
+                                    <div class="gallery-item">
+                                        <div class="gallery-img">
+                                            <a class="glightbox" data-gallery="images-gallery" href='<%# Eval("ImagePath") %>'>
+                                                <img src='<%# Eval("ImagePath") %>' class="img-fluid" alt="">
+                                                <div class="gallery-overlay">
+                                                    <i class="bi bi-plus-circle"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.png">
-                      <img src="assets/img/gallery/gallery-1.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.png">
-                      <img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.png">
-                      <img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.png">
-                      <img src="assets/img/gallery/gallery-2.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.png">
-                      <img src="assets/img/gallery/gallery-4.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.png">
-                      <img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <div class="gallery-img">
-                    <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.png">
-                      <img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt="">
-                      <div class="gallery-overlay">
-                        <i class="bi bi-plus-circle"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
         </div>
-
-      </div>
-
-    </section><!-- /Gallery Slider Section -->
+    </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-nature">Nature</li>
+                    <li data-filter=".filter-architecture">Architecture</li>
+                    <li data-filter=".filter-people">People</li>
+                </ul>
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-nature">Nature</li>
-            <li data-filter=".filter-architecture">Architecture</li>
-            <li data-filter=".filter-people">People</li>
-          </ul>
+                <div class="row gallery-grid isotope-container" data-aos="fade-up" data-aos-delay="300">
+                    <asp:Repeater ID="rptGallery" runat="server">
+                        <ItemTemplate>
+                            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item <%# Eval("CategoryClass") %>">
+                                <div class="gallery-card">
+                                    <div class="gallery-image">
+                                        <img src='<%# Eval("ImagePath") %>' class="img-fluid" alt="">
+                                    </div>
+                                    <div class="gallery-overlay">
+                                        <h4><%# Eval("Title") %></h4>
+                                        <p><%# Eval("Description") %></p>
+                                        <div class="gallery-actions">
+                                            <a href='<%# Eval("ImagePath") %>' title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
+                                            <a href="gallery-details.aspx?ImageId=<%# Eval("ImageId") %>"><i class="bi bi-info-circle"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
 
-          <div class="row gallery-grid isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-1.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Natural Beauty</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-1.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-2.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Urban Landscape</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-2.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-3.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Candid Moments</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-3.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-4.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Wilderness</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-4.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Modern Design</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-5.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Portrait Studies</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-6.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Serene Waters</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-7.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
-              <div class="gallery-card">
-                <div class="gallery-image">
-                  <img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt="">
-                </div>
-                <div class="gallery-overlay">
-                  <h4>Historical Places</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="gallery-actions">
-                    <a href="assets/img/gallery/gallery-8.png" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.aspx"><i class="bi bi-info-circle"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-          </div>
+            </div>
         </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
-
-  </main>
-
+    </section>
+</main>
 </asp:Content>
-

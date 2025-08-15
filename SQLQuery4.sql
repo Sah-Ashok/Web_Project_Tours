@@ -1,0 +1,87 @@
+﻿INSERT INTO Tours
+    (Title, ImagePath, Badge, Price, DurationDays, MaxGroupSize, Description, TourHighlights, Rating, RatingCount, BookingUrl, Category)
+VALUES
+    (
+        'Serene Beach Retreat',
+        'assets/img/travel/tour-1.png',
+        'Top Rated',
+        2150.00,
+        8,
+        6,
+        'Mauris ipsum neque, cursus ac ipsum at, iaculis facilisis ligula. Suspendisse non sapien vel enim cursus semper.',
+        '["Maldives", "Seychelles", "Bora Bora"]',
+        4.8,
+        95,
+        'booking.aspx',
+        NULL
+    ),
+    (
+        'Arctic Wilderness Expedition',
+        'assets/img/travel/tour-2.png',
+        'Only 3 Spots!',
+        5700.00,
+        10,
+        8,
+        'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum non massa nec fermentum.',
+        '["Greenland", "Iceland", "Norway"]',
+        4.6,
+        55,
+        'booking.aspx',
+        NULL
+    ),
+    (
+        'Sahara Desert Discovery',
+        'assets/img/travel/tour-4.png',
+        'Newly Added',
+        1400.00,
+        5,
+        10,
+        'Pellentesque euismod tincidunt turpis ac tristique. Phasellus vitae lacus in enim mollis facilisis vel quis ex. In hac habitasse platea dictumst.',
+        '["Morocco", "Egypt", "Dubai"]',
+        4.9,
+        72,
+        'booking.aspx',
+        NULL
+    ),
+    (
+        'Mediterranean Coastal Cruise',
+        'assets/img/travel/tour-5.png',
+        'Popular Choice',
+        1980.00,
+        9,
+        15,
+        'Nullam lacinia justo eget ex sodales, vel finibus orci aliquet. Donec auctor, elit ut molestie gravida, magna mi molestie nisi.',
+        '["Greece", "Croatia", "Italy"]',
+        4.7,
+        110,
+        'booking.aspx',
+        NULL
+    ),
+    (
+        'Amazon Rainforest Trek',
+        'assets/img/travel/tour-6.png',
+        'Eco-Friendly',
+        2650.00,
+        12,
+        10,
+        'Quisque dictum felis eu tortor mollis, quis tincidunt arcu pharetra. A pellentesque sit amet, consectetur adipiscing elit.',
+        '["Brazil", "Ecuador", "Peru"]',
+        4.5,
+        88,
+        'booking.aspx',
+        'Cultural'
+    ),
+    (
+        'Patagonian Peaks & Glaciers',
+        'assets/img/travel/tour-8.png',
+        'Adventure Seekers',
+        3950.00,
+        14,
+        10,
+        'Vivamus eget semper neque. Ut porttitor mi at odio egestas, non vestibulum est malesuada. Nunc facilisis in felis eget efficitur.',
+        '["Argentina", "Chile", "Ushuaia"]',
+        4.9,
+        60,
+        'booking.aspx',
+        'Adventure'
+    );
