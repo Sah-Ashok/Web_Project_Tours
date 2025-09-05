@@ -38,7 +38,6 @@
                                     Join Tour to unlock exclusive deals and personalized travel experiences.
                                 </p>
 
-                                <!-- ASP.NET form content (no <form> tag here) -->
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <label for="FullName">Full Name</label>

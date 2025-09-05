@@ -30,11 +30,9 @@ namespace Web_Project_Tours
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // 1. Clear session
             Session.Clear();
             Session.Abandon();
 
-            // 3. Redirect to login
             Response.Redirect("login.aspx?isAuth=false");
         }
 

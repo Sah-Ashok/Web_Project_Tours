@@ -246,7 +246,9 @@
     <Content Include="contact.aspx" />
     <Content Include="destination-details.aspx" />
     <Content Include="Destinations.aspx" />
+    <Content Include="forgot-password.aspx" />
     <Content Include="forms\Readme.txt" />
+    <Content Include="gallery-details.aspx" />
     <Content Include="gallery.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
@@ -301,6 +303,21 @@
     </Compile>
     <Compile Include="Destinations.aspx.designer.cs">
       <DependentUpon>Destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailService.cs" />
+    <Compile Include="forgot-password.aspx.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot-password.aspx.designer.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gallery-details.aspx.cs">
+      <DependentUpon>gallery-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gallery-details.aspx.designer.cs">
+      <DependentUpon>gallery-details.aspx</DependentUpon>
     </Compile>
     <Compile Include="gallery.aspx.cs">
       <DependentUpon>gallery.aspx</DependentUpon>

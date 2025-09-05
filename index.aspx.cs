@@ -41,6 +41,7 @@ namespace Web_Project_Tours
         {
             using (SqlConnection con = DatabaseHelper.GetConnection())
             {
+
                 string query = "SELECT * FROM Tours ORDER BY Id";  
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();

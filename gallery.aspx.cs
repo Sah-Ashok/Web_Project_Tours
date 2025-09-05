@@ -16,8 +16,8 @@ namespace Web_Project_Tours
                 }
                 catch (Exception ex)
                 {
-                    // Optional: log the error instead of showing to the user
-                    Response.Write("<script>alert('Error loading gallery. Please try again later.');</script>");
+                    
+                    Response.Write("<script>alert('Error loading gallery. Please try again later.','"+ex+"');</script>");
                 }
             }
         }
@@ -26,11 +26,7 @@ namespace Web_Project_Tours
         {
             using (SqlConnection con = DatabaseHelper.GetConnection())
             {
-                string query = @"
-                    SELECT ImagePath, Title, Description
-                    FROM Gallery
-                    WHERE IsActive = 1
-                    ORDER BY DisplayOrder ASC";
+                string query = "SELECT ImagePath, Title, Descriptio FROM Gallery  WHERE IsActive = 1 ORDER BY DisplayOrder ASC";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -47,11 +43,7 @@ namespace Web_Project_Tours
         {
             using (SqlConnection con = DatabaseHelper.GetConnection())
             {
-                string query = @"
-                    SELECT ImageId, Title, Description, ImagePath, Category AS CategoryClass
-                    FROM Gallery
-                    WHERE IsActive = 1
-                    ORDER BY DisplayOrder ASC";
+                string query = @"SELECT ImageId, Title, Description, ImagePath, Category AS CategoryClass  FROM Gallery WHERE IsActive = 1  ORDER BY DisplayOrder ASC";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
