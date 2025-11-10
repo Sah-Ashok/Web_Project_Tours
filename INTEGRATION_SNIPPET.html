@@ -1,0 +1,112 @@
+<!-- 
+=============================================================================
+QUICK INTEGRATION SNIPPET FOR HOME.ASPX
+Copy and paste these sections into your Home.aspx file
+=============================================================================
+-->
+
+<!-- ========================================= -->
+<!-- STEP 1: Add to <head> ContentPlaceHolder -->
+<!-- ========================================= -->
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <!-- Existing Google Fonts, Font Awesome, etc. -->
+    
+    <!-- ADD THIS LINE: Modern Hero Section Styles -->
+    <link rel="stylesheet" href="CSS/modern-hero.css" />
+</asp:Content>
+
+<!-- ========================================= -->
+<!-- STEP 2: Replace Hero Section in <main>   -->
+<!-- Find the section with id="home" and      -->
+<!-- replace it with the content from         -->
+<!-- modern-hero-section.html                 -->
+<!-- ========================================= -->
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <main>
+      <!-- =============================================== -->
+      <!-- MODERN IMMERSIVE HERO SECTION                -->
+      <!-- Copy entire content from modern-hero-section.html -->
+      <!-- =============================================== -->
+      
+      <!-- Keep your existing sections below: -->
+      <!-- How It Works Section -->
+      <!-- Famous Destinations Section -->
+      <!-- Why Us Section -->
+      <!-- Testimonials Section -->
+      <!-- Newsletter Section -->
+    </main>
+
+    <!-- ========================================= -->
+    <!-- STEP 3: Add JavaScript before closing     -->
+    <!-- Place this AFTER all other content        -->
+    <!-- ========================================= -->
+    
+    <!-- Existing Hero Video Background Script (can remove if replacing) -->
+    
+    <!-- ADD THIS: Modern Hero JavaScript -->
+    <script src="JS/modern-hero.js"></script>
+</asp:Content>
+
+<!-- 
+=============================================================================
+ALTERNATIVE: If using Master Page Script ContentPlaceHolder
+=============================================================================
+-->
+<asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
+    <script src="JS/modern-hero.js"></script>
+</asp:Content>
+
+<!-- 
+=============================================================================
+FULL HEAD SECTION EXAMPLE (for reference)
+=============================================================================
+-->
+<!--
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <link rel="stylesheet" href="CSS/home.css" />
+    <link rel="stylesheet" href="CSS/modern-hero.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</asp:Content>
+-->
+
+<!-- 
+=============================================================================
+NOTES:
+=============================================================================
+1. modern-hero.css MUST be loaded AFTER home.css to override styles
+2. modern-hero.js MUST be loaded AFTER AOS.js initialization
+3. Keep your existing color variables in Site1.Master (:root section)
+4. The new hero section uses these existing CSS variables:
+   - var(--midnight-green)
+   - var(--dartmouth-green)
+   - var(--accent-color)
+   - var(--ivory-bg)
+
+=============================================================================
+OPTIONAL: Add Date Picker Library (Flatpickr)
+=============================================================================
+-->
+<!--
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr("#modern-date-input", {
+            mode: "range",
+            minDate: "today",
+            dateFormat: "M d, Y",
+            altInput: true,
+            altFormat: "F j, Y",
+            showMonths: 2
+        });
+    });
+</script>
+-->

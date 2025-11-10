@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu - Interactive Demo | Tours & Travels</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <style>
+        :root {
+            --midnight-green: #073b3a;
+            --dartmouth-green: #0b6e4f;
+            --pigment-green: #08a045;
+            --mantis: #6bbf59;
+            --ecru: #ddb771;
+            --accent-color: #f59e0b;
+            --ivory-bg: #fcf8f3;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .demo-header {
+            background: linear-gradient(135deg, var(--midnight-green) 0%, var(--dartmouth-green) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .demo-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Demo Navbar */
+        .demo-navbar {
+            position: sticky;
+            top: 0;
+            background: var(--midnight-green);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .demo-navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--ecru);
+        }
+
+        /* Include all mega menu styles from Site1.Master */
+        .mega-menu-container {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            max-width: 90vw;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            margin-top: 8px;
+            z-index: 999;
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .mega-menu-container.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu-grid {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 24px;
+            padding: 24px;
+        }
+
+        .mega-menu-popular {
+            padding-right: 16px;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .mega-menu-categories {
+            padding-left: 8px;
+        }
+
+        .mega-menu-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--midnight-green);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .destination-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .destination-card:hover {
+            background-color: #F7F9F9;
+            transform: translateY(-2px);
+        }
+
+        .destination-thumbnail {
+            width: 80px;
+            height: 60px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .destination-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .destination-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .destination-country {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+
+        .destination-price {
+            display: inline-block;
+            background-color: #e0f2f1;
+            color: var(--midnight-green);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-right: 8px;
+        }
+
+        .destination-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .category-item:hover {
+            background-color: #F7F9F9;
+            transform: translateX(4px);
+        }
+
+        .category-item-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-icon {
+            font-size: 20px;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .category-name {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .category-count {
+            font-size: 13px;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .mega-menu-close {
+            display: none;
+        }
+
+        .mega-menu-search {
+            display: none;
+        }
+
+        .alphabet-nav {
+            display: none;
+        }
+
+        .destinations-nav-link {
+            position: relative;
+        }
+
+        .destinations-nav-link::after {
+            content: '▼';
+            margin-left: 4px;
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .destinations-nav-link.mega-menu-open::after {
+            transform: rotate(180deg);
+        }
+
+        /* Animation */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mega-menu-container.active .destination-card,
+        .mega-menu-container.active .category-item {
+            animation: slideInUp 0.3s ease-out backwards;
+        }
+
+        .mega-menu-container.active .destination-card:nth-child(1) { animation-delay: 0.05s; }
+        .mega-menu-container.active .destination-card:nth-child(2) { animation-delay: 0.1s; }
+        .mega-menu-container.active .destination-card:nth-child(3) { animation-delay: 0.15s; }
+        .mega-menu-container.active .destination-card:nth-child(4) { animation-delay: 0.2s; }
+        .mega-menu-container.active .destination-card:nth-child(5) { animation-delay: 0.25s; }
+        .mega-menu-container.active .destination-card:nth-child(6) { animation-delay: 0.3s; }
+
+        /* Demo Content */
+        .demo-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .demo-section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--midnight-green);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .demo-section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dartmouth-green);
+            margin: 20px 0 10px;
+            font-size: 1.3rem;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .status-indicator.closed {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .status-indicator.open {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .test-checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .test-checklist li {
+            padding: 12px;
+            border-left: 4px solid #e5e7eb;
+            margin-bottom: 8px;
+            background: #f9fafb;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .test-checklist li:hover {
+            border-left-color: var(--accent-color);
+            background: #fef3c7;
+        }
+
+        .test-checklist li::before {
+            content: '☐';
+            margin-right: 10px;
+            font-size: 18px;
+            color: #9ca3af;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 4px;
+        }
+
+        .badge-success {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        .badge-info {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+        .badge-warning {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        @media (max-width: 1024px) {
+            .mega-menu-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                max-width: 100%;
+                height: 100vh;
+                border-radius: 0;
+                margin-top: 0;
+                transform: translateX(0) translateY(100%);
+                overflow-y: auto;
+                padding: 20px;
+            }
+
+            .mega-menu-container.active {
+                transform: translateX(0) translateY(0);
+            }
+
+            .mega-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-menu-popular {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding-bottom: 24px;
+            }
+
+            .mega-menu-close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 32px;
+                height: 32px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: var(--text-dark);
+                font-size: 24px;
+            }
+
+            .demo-navbar {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Header -->
+    <div class="demo-header">
+        <h1>🗺️ Mega Menu Interactive Demo</h1>
+        <p>Destinations Dropdown with Visual Previews & Categories</p>
+    </div>
+
+    <!-- Demo Navbar with Mega Menu -->
+    <nav class="demo-navbar">
+        <a href="#">Home</a>
+        
+        <!-- Mega Menu Implementation -->
+        <div style="position: relative;" id="destinations-nav-wrapper">
+            <a href="#" 
+               class="destinations-nav-link" 
+               id="destinations-nav-trigger"
+               aria-expanded="false"
+               aria-haspopup="true"
+               aria-controls="mega-menu">
+                <i class="fa-solid fa-map-location-dot"></i> Destinations
+            </a>
+
+            <!-- Mega Menu Dropdown -->
+            <div class="mega-menu-container" id="mega-menu" role="menu" aria-label="Destinations Menu">
+                
+                <button class="mega-menu-close" id="mega-menu-close" aria-label="Close menu">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+
+                <div class="mega-menu-grid">
+                    
+                    <!-- Popular Destinations -->
+                    <div class="mega-menu-popular">
+                        <h3 class="mega-menu-section-title">Popular Destinations</h3>
+                        <div id="popular-destinations-list">
+                            <div style="text-align: center; padding: 40px; color: #9ca3af;">
+                                <i class="fa-solid fa-spinner fa-spin" style="font-size: 24px; margin-bottom: 10px;"></i>
+                                <p>Loading destinations...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="mega-menu-categories">
+                        <h3 class="mega-menu-section-title">By Region</h3>
+                        <div class="category-list" id="regions-list"></div>
+
+                        <h3 class="mega-menu-section-title" style="margin-top: 24px;">By Interest</h3>
+                        <div class="category-list" id="interests-list"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Demo Content -->
+    <div class="demo-content">
+
+        <!-- Status Section -->
+        <div class="demo-section">
+            <h2>📊 Real-Time Status</h2>
+            
+            <div id="status-indicator" class="status-indicator closed">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <span>Menu Closed</span>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value" id="open-count">0</div>
+                    <div class="metric-label">Times Opened</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="hover-count">0</div>
+                    <div class="metric-label">Hover Triggers</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="click-count">0</div>
+                    <div class="metric-label">Click Triggers</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="avg-time">0s</div>
+                    <div class="metric-label">Avg. Open Time</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="demo-section">
+            <h2>✨ Features Implemented</h2>
+            
+            <h3>🖱️ Interaction</h3>
+            <span class="badge badge-success">200ms Hover Delay</span>
+            <span class="badge badge-success">Click/Tap Support</span>
+            <span class="badge badge-success">Outside Click Close</span>
+            <span class="badge badge-success">ESC Key Close</span>
+
+            <h3>♿ Accessibility</h3>
+            <span class="badge badge-info">Arrow Key Navigation</span>
+            <span class="badge badge-info">Focus Trap</span>
+            <span class="badge badge-info">ARIA Attributes</span>
+            <span class="badge badge-info">Screen Reader Support</span>
+
+            <h3>⚡ Performance</h3>
+            <span class="badge badge-warning">Lazy Image Loading</span>
+            <span class="badge badge-warning">SessionStorage Cache</span>
+            <span class="badge badge-warning">IntersectionObserver</span>
+            <span class="badge badge-warning">Preload on Page Load</span>
+
+            <h3>📱 Responsive</h3>
+            <span class="badge badge-success">Desktop Grid Layout</span>
+            <span class="badge badge-success">Mobile Full-Screen</span>
+            <span class="badge badge-success">Search Bar (Mobile)</span>
+            <span class="badge badge-success">Alphabet Navigation</span>
+        </div>
+
+        <!-- Testing Checklist -->
+        <div class="demo-section">
+            <h2>✅ Testing Checklist</h2>
+            <ul class="test-checklist">
+                <li>Hover over "Destinations" link (desktop) - menu opens after 200ms</li>
+                <li>Move mouse away - menu closes immediately</li>
+                <li>Click "Destinations" on mobile - full-screen overlay appears</li>
+                <li>Click close button (X) - menu closes</li>
+                <li>Press ESC key while menu is open - menu closes</li>
+                <li>Click outside the menu - menu closes</li>
+                <li>Press Tab key - focus moves through menu items</li>
+                <li>Press Arrow Down/Up - navigate between items</li>
+                <li>Press Home key - jump to first item</li>
+                <li>Press End key - jump to last item</li>
+                <li>Press Enter on destination card - navigates to destination</li>
+                <li>Verify images load lazily (check Network tab)</li>
+                <li>Open menu second time - data loads from cache</li>
+                <li>Resize browser window - menu adapts responsively</li>
+                <li>Test on mobile device - full-screen overlay works</li>
+            </ul>
+        </div>
+
+        <!-- Code Example -->
+        <div class="demo-section">
+            <h2>💻 Integration Code</h2>
+            
+            <h3>HTML Structure</h3>
+            <div class="code-block">
+&lt;div id="destinations-nav-wrapper"&gt;
+    &lt;a href="/Destination.aspx" 
+       id="destinations-nav-trigger"
+       class="destinations-nav-link"
+       aria-expanded="false"
+       aria-haspopup="true"&gt;
+        Destinations
+    &lt;/a&gt;
+    
+    &lt;div class="mega-menu-container" id="mega-menu"&gt;
+        &lt;!-- Menu content here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+
+            <h3>JavaScript Initialization</h3>
+            <div class="code-block">
+// Fetch destinations data
+const response = await fetch('/destinations-data.json');
+const data = await response.json();
+
+// Render menu
+renderMegaMenu(data);
+
+// Attach event listeners
+setupHoverTrigger(200); // 200ms delay
+setupKeyboardNavigation();
+setupLazyLoading();
+            </div>
+        </div>
+
+        <!-- Console Log -->
+        <div class="demo-section">
+            <h2>📝 Event Log</h2>
+            <div id="event-log" class="code-block" style="max-height: 300px; overflow-y: auto;">
+                <div style="color: #10b981;">[Ready] Demo initialized</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="Tours&Travels/destinations-data.json"></script>
+    <script>
+        // ============================================================================
+        // DEMO ANALYTICS & LOGGING
+        // ============================================================================
+        
+        let openCount = 0;
+        let hoverCount = 0;
+        let clickCount = 0;
+        let openTimes = [];
+        let lastOpenTime = null;
+
+        function logEvent(message, type = 'info') {
+            const eventLog = document.getElementById('event-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const colors = {
+                info: '#3b82f6',
+                success: '#10b981',
+                warning: '#f59e0b',
+                error: '#ef4444'
+            };
+            
+            const logEntry = document.createElement('div');
+            logEntry.style.color = colors[type];
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            eventLog.appendChild(logEntry);
+            
+            // Auto-scroll to bottom
+            eventLog.scrollTop = eventLog.scrollHeight;
+        }
+
+        function updateMetrics() {
+            document.getElementById('open-count').textContent = openCount;
+            document.getElementById('hover-count').textContent = hoverCount;
+            document.getElementById('click-count').textContent = clickCount;
+            
+            if (openTimes.length > 0) {
+                const avgTime = openTimes.reduce((a, b) => a + b, 0) / openTimes.length;
+                document.getElementById('avg-time').textContent = avgTime.toFixed(1) + 's';
+            }
+        }
+
+        // ============================================================================
+        // MEGA MENU IMPLEMENTATION (Same as Site1.Master)
+        // ============================================================================
+
+        const megaMenuWrapper = document.getElementById('destinations-nav-wrapper');
+        const megaMenuTrigger = document.getElementById('destinations-nav-trigger');
+        const megaMenu = document.getElementById('mega-menu');
+        const megaMenuClose = document.getElementById('mega-menu-close');
+        const statusIndicator = document.getElementById('status-indicator');
+
+        let hoverTimeout = null;
+        let isMenuOpen = false;
+        let destinationsData = null;
+        const HOVER_DELAY = 200;
+
+        // Load data
+        async function loadDestinationsData() {
+            try {
+                const response = await fetch('Tours&Travels/destinations-data.json');
+                if (!response.ok) throw new Error('Failed to load');
+                const data = await response.json();
+                logEvent('Destinations data loaded successfully', 'success');
+                return data;
+            } catch (error) {
+                logEvent('Error loading destinations: ' + error.message, 'error');
+                return null;
+            }
+        }
+
+        // Render menu
+        function renderMegaMenu() {
+            if (!destinationsData) return;
+
+            const { popularDestinations, regions, interests } = destinationsData;
+
+            // Popular Destinations
+            const popularList = document.getElementById('popular-destinations-list');
+            if (popularList && popularDestinations) {
+                popularList.innerHTML = popularDestinations.map(dest => `
+                    <a href="${dest.url}" class="destination-card" role="menuitem" tabindex="0">
+                        <img src="https://via.placeholder.com/80x60/4ade80/ffffff?text=${dest.name.charAt(0)}" 
+                             alt="${dest.image.alt}"
+                             class="destination-thumbnail" />
+                        <div class="destination-info">
+                            <div class="destination-name">${dest.name}</div>
+                            <div class="destination-country">${dest.country}</div>
+                            <div>
+                                <span class="destination-price">From $${dest.price}</span>
+                                <span class="destination-rating">
+                                    ${dest.rating} <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                `).join('');
+            }
+
+            // Regions
+            const regionsList = document.getElementById('regions-list');
+            if (regionsList && regions) {
+                regionsList.innerHTML = regions.map(region => `
+                    <a href="${region.url}" class="category-item" role="menuitem" tabindex="0">
+                        <div class="category-item-left">
+                            <span class="category-icon">${region.icon}</span>
+                            <span class="category-name">${region.name}</span>
+                        </div>
+                        <span class="category-count">${region.count}</span>
+                    </a>
+                `).join('');
+            }
+
+            // Interests
+            const interestsList = document.getElementById('interests-list');
+            if (interestsList && interests) {
+                interestsList.innerHTML = interests.slice(0, 4).map(interest => `
+                    <a href="${interest.url}" class="category-item" role="menuitem" tabindex="0">
+                        <div class="category-item-left">
+                            <span class="category-icon">${interest.icon}</span>
+                            <span class="category-name">${interest.name}</span>
+                        </div>
+                        <span class="category-count">${interest.count}</span>
+                    </a>
+                `).join('');
+            }
+
+            logEvent('Menu content rendered', 'success');
+        }
+
+        // Open menu
+        function openMegaMenu(trigger = 'hover') {
+            if (isMenuOpen) return;
+            
+            if (destinationsData && megaMenu.querySelector('#popular-destinations-list').children.length === 1) {
+                renderMegaMenu();
+            }
+
+            megaMenu.classList.add('active');
+            megaMenuTrigger.classList.add('mega-menu-open');
+            megaMenuTrigger.setAttribute('aria-expanded', 'true');
+            isMenuOpen = true;
+            lastOpenTime = Date.now();
+
+            statusIndicator.className = 'status-indicator open';
+            statusIndicator.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>Menu Open</span>';
+
+            openCount++;
+            if (trigger === 'hover') hoverCount++;
+            if (trigger === 'click') clickCount++;
+            updateMetrics();
+
+            logEvent(`Menu opened (trigger: ${trigger})`, 'success');
+        }
+
+        // Close menu
+        function closeMegaMenu() {
+            if (!isMenuOpen) return;
+
+            megaMenu.classList.remove('active');
+            megaMenuTrigger.classList.remove('mega-menu-open');
+            megaMenuTrigger.setAttribute('aria-expanded', 'false');
+            isMenuOpen = false;
+
+            if (lastOpenTime) {
+                const duration = (Date.now() - lastOpenTime) / 1000;
+                openTimes.push(duration);
+                updateMetrics();
+            }
+
+            statusIndicator.className = 'status-indicator closed';
+            statusIndicator.innerHTML = '<i class="fa-solid fa-circle-xmark"></i><span>Menu Closed</span>';
+
+            logEvent('Menu closed', 'info');
+        }
+
+        // Event listeners
+        if (megaMenuWrapper && window.innerWidth >= 1024) {
+            megaMenuWrapper.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    openMegaMenu('hover');
+                }, HOVER_DELAY);
+            });
+
+            megaMenuWrapper.addEventListener('mouseleave', function() {
+                clearTimeout(hoverTimeout);
+                closeMegaMenu();
+            });
+        }
+
+        if (megaMenuTrigger) {
+            megaMenuTrigger.addEventListener('click', function(e) {
+                if (window.innerWidth < 1024) {
+                    e.preventDefault();
+                    if (isMenuOpen) {
+                        closeMegaMenu();
+                    } else {
+                        openMegaMenu('click');
+                    }
+                }
+            });
+        }
+
+        if (megaMenuClose) {
+            megaMenuClose.addEventListener('click', closeMegaMenu);
+        }
+
+        document.addEventListener('click', function(e) {
+            if (isMenuOpen && megaMenuWrapper && !megaMenuWrapper.contains(e.target)) {
+                closeMegaMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isMenuOpen) {
+                closeMegaMenu();
+                megaMenuTrigger.focus();
+            }
+        });
+
+        // Keyboard navigation
+        if (megaMenu) {
+            megaMenu.addEventListener('keydown', function(e) {
+                const focusableElements = Array.from(
+                    megaMenu.querySelectorAll('a[role="menuitem"]')
+                );
+                
+                const currentIndex = focusableElements.indexOf(document.activeElement);
+
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        const nextIndex = (currentIndex + 1) % focusableElements.length;
+                        focusableElements[nextIndex]?.focus();
+                        logEvent('Keyboard: Arrow Down', 'info');
+                        break;
+
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        const prevIndex = currentIndex - 1 < 0 ? focusableElements.length - 1 : currentIndex - 1;
+                        focusableElements[prevIndex]?.focus();
+                        logEvent('Keyboard: Arrow Up', 'info');
+                        break;
+
+                    case 'Home':
+                        e.preventDefault();
+                        focusableElements[0]?.focus();
+                        logEvent('Keyboard: Home', 'info');
+                        break;
+
+                    case 'End':
+                        e.preventDefault();
+                        focusableElements[focusableElements.length - 1]?.focus();
+                        logEvent('Keyboard: End', 'info');
+                        break;
+                }
+            });
+        }
+
+        // Initialize
+        (async function() {
+            destinationsData = await loadDestinationsData();
+            if (destinationsData) {
+                logEvent('Demo ready - hover over "Destinations" to test', 'success');
+            }
+        })();
+    </script>
+
+</body>
+</html>
