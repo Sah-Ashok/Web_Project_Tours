@@ -205,12 +205,7 @@
                                                     Style="background-color: var(--dartmouth-green)">
                                                 </asp:HyperLink>
 
-                                                <asp:LinkButton ID="btnWishlist" runat="server"
-                                                    CssClass="w-full py-3 rounded-full text-dartmouth-green border-2 border-dartmouth-green text-lg font-bold transition-all hover:bg-dartmouth-green hover:text-white flex items-center justify-center gap-2"
-                                                    OnClick="btnWishlist_Click">
-                                                <i class="bi bi-heart"></i>
-                                                <span>Add to Wishlist</span>
-                                                </asp:LinkButton>
+                                             
                                             </div>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>

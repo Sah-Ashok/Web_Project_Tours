@@ -159,15 +159,6 @@ namespace Tours_Travels
         protected global::System.Web.UI.WebControls.HyperLink hlBookNow;
 
         /// <summary>
-        /// btnWishlist control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnWishlist;
-
-        /// <summary>
         /// divError control.
         /// </summary>
         /// <remarks>

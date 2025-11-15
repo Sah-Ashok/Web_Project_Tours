@@ -156,20 +156,5 @@ namespace Tours_Travels
             }
         }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            LinkButton btn = (LinkButton)sender;
-            int bookingId = Convert.ToInt32(btn.CommandArgument);
-
-            GetCon();
-            string query = "UPDATE Bookings SET BookingStatus = 'Cancelled' WHERE BookingId = @BookingId";
-            cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@BookingId", bookingId);
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-            // Refresh data
-            GetUserBookingsAsync().GetAwaiter().GetResult();
-        }
     }
 }

@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C# practice\\Tours\u0026Travels\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\admindestinations.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\admindestinations.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\admindestinations.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\admindestinations.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\controllers\\modeldest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\controllers\\modeldest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\controllers\\apis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\controllers\\apis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\adddest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\adddest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\adddest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\adddest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\viewdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\viewdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|E:\\C# practice\\Tours\u0026Travels\\tours\u0026travels\\viewbookingdetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\viewbookingdetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\services\\razorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\services\\razorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|e:\\c# practice\\tours\u0026travels\\tours\u0026travels\\viewbookingdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8D328732-A367-4034-82F2-B44FA0959F18}|Tours\u0026Travels\\Tours\u0026Travels.csproj|solutionrelative:tours\u0026travels\\viewbookingdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminDestinations.aspx.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AdminDestinations.aspx.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\AdminDestinations.aspx.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AdminDestinations.aspx.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\AdminDestinations.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T10:29:27.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDestinations.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AdminDestinations.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\AdminDestinations.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AdminDestinations.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\AdminDestinations.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T10:08:42.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewDetails.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewDetails.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\ViewDetails.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewDetails.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\ViewDetails.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T09:52:18.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "About.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\About.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\About.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\About.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\About.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T09:23:45.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "APIs.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Controllers\\APIs.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Controllers\\APIs.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Controllers\\APIs.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\Controllers\\APIs.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwC0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:16:08.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModelDest.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Controllers\\ModelDest.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Controllers\\ModelDest.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Controllers\\ModelDest.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\Controllers\\ModelDest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:16:33.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Services\\EmailService.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Services\\EmailService.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:16:03.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddDest.aspx.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AddDest.aspx.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\AddDest.aspx.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AddDest.aspx.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\AddDest.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:10:58.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddDest.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AddDest.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\AddDest.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\AddDest.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\AddDest.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T09:12:22.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Site1.Master",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Site1.Master",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Site1.Master",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Site1.Master",
+              "RelativeToolTip": "Tours\u0026Travels\\Site1.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T08:35:03.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Contact.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Contact.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Contact.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T07:33:49.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RazorpayService.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Services\\RazorpayService.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\Services\\RazorpayService.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\Services\\RazorpayService.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\Services\\RazorpayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:30:21.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewBookingDetails.aspx",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewBookingDetails.aspx",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\ViewBookingDetails.aspx",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewBookingDetails.aspx",
+              "RelativeToolTip": "Tours\u0026Travels\\ViewBookingDetails.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-13T03:56:56.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ViewBookingDetails.aspx.cs",
+              "DocumentMoniker": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewBookingDetails.aspx.cs",
+              "RelativeDocumentMoniker": "Tours\u0026Travels\\ViewBookingDetails.aspx.cs",
+              "ToolTip": "E:\\C# practice\\Tours\u0026Travels\\Tours\u0026Travels\\ViewBookingDetails.aspx.cs",
+              "RelativeToolTip": "Tours\u0026Travels\\ViewBookingDetails.aspx.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAAAHUBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T03:25:22.597Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

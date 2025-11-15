@@ -1,5 +1,3 @@
-E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.csproj.AssemblyReference.cache
-E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.csproj.CoreCompileInputs.cache
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Tours&Travels.dll.config
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Tours&Travels.dll
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Tours&Travels.pdb
@@ -52,10 +50,15 @@ E:\C# practice\Tours&Travels\Tours&Travels\bin\roslyn\vbc.exe.config
 E:\C# practice\Tours&Travels\Tours&Travels\bin\roslyn\vbc.rsp
 E:\C# practice\Tours&Travels\Tours&Travels\bin\roslyn\VBCSCompiler.exe
 E:\C# practice\Tours&Travels\Tours&Travels\bin\roslyn\VBCSCompiler.exe.config
+E:\C# practice\Tours&Travels\Tours&Travels\bin\BouncyCastle.Crypto.dll
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Newtonsoft.Json.dll
+E:\C# practice\Tours&Travels\Tours&Travels\bin\Razorpay.dll
+E:\C# practice\Tours&Travels\Tours&Travels\bin\BouncyCastle.Crypto.xml
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Newtonsoft.Json.xml
 E:\C# practice\Tours&Travels\Tours&Travels\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.csproj.AssemblyReference.cache
+E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.csproj.CoreCompileInputs.cache
 E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Tr.5FBBAB4C.Up2Date
 E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.dll
 E:\C# practice\Tours&Travels\Tours&Travels\obj\Debug\Tours&Travels.pdb

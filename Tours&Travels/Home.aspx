@@ -42,7 +42,7 @@
 
       /* Added floating animation for icons */
       .floating-icon {
-        animation: float 3s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite;npm
       }
 
       @keyframes float {

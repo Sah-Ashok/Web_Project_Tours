@@ -125,7 +125,7 @@
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td class="font-mono text-sm text-gray-500"><%# Eval("_id") %></td>
+                                            <td class="font-mono text-sm text-gray-500"><%# Eval("Id") %></td>
                                             <td><img src='http://localhost:3000/uploads/<%# Eval("mainImage") %>' alt='<%# Eval("name") %>' class="dest-image-thumb" /></td>
                                             <td class="font-semibold text-gray-800"><%# Eval("name") %></td>
                                             <td class="text-gray-600"><%# Eval("region") %></td>
@@ -133,13 +133,13 @@
                                             <td class="font-semibold text-gray-800">$<%# Eval("price", "{0:N2}") %></td>
                                             <td>
                                                 <div class="flex items-center gap-2">
-                                                    <a href='EditDestination.aspx?id=<%# Eval("_id") %>' class='action-btn edit-btn'>
+                                                    <a href='EditDestination.aspx?id=<%# Eval("Id") %>' class='action-btn edit-btn'>
                                                         <i class="las la-pen"></i> Edit
                                                     </a>
                                                     <asp:LinkButton ID="btnDelete" runat="server"
                                                         CssClass="action-btn delete-btn"
                                                         CommandName="DeleteDestination"
-                                                        CommandArgument='<%# Eval("_id") %>'
+                                                        CommandArgument='<%# Eval("Id") %>'
                                                         UseSubmitBehavior="false"
                                                         OnClientClick="return openConfirmModal(this);">
                                                         <i class="las la-trash"></i> Delete

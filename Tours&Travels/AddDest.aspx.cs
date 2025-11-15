@@ -2,40 +2,36 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
-using Newtonsoft.Json;
 
 namespace Tours_Travels
 {
- 
     public partial class AddDest : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-                RegisterAsyncTask(new PageAsyncTask(SubmitBtn_Click_Async));
-            }
         }
 
-        protected async Task SubmitBtn_Click_Async()
+        protected async void SubmitBtn_Click_Async(object sender, EventArgs e)
         {
-            string mainImagePath = null;
-            var galleryImagePaths = new List<string>();
             string savePath = Server.MapPath("~/Images/");
+            Directory.CreateDirectory(savePath);
+
+            string mainImageUrl = null;
+            List<string> galleryUrls = new List<string>();
 
             try
             {
-                Directory.CreateDirectory(savePath);
-
                 if (MainImageUpload.HasFile)
                 {
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(MainImageUpload.FileName);
-                    MainImageUpload.SaveAs(Path.Combine(savePath, fileName));
-                    mainImagePath = "/Images/" + fileName;
+                    string fileName = Guid.NewGuid() + Path.GetExtension(MainImageUpload.FileName);
+                    string fullPath = Path.Combine(savePath, fileName);
+
+                    MainImageUpload.SaveAs(fullPath);
+
+                    mainImageUrl = "/Images/" + fileName;
                 }
 
                 if (GalleryImagesUpload.HasFiles)
@@ -44,9 +40,12 @@ namespace Tours_Travels
                     {
                         if (file.ContentLength > 0)
                         {
-                            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                            file.SaveAs(Path.Combine(savePath, fileName));
-                            galleryImagePaths.Add("/Images/" + fileName);
+                            string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                            string fullPath = Path.Combine(savePath, fileName);
+
+                            file.SaveAs(fullPath);
+
+                            galleryUrls.Add("/Images/" + fileName);
                         }
                     }
                 }
@@ -55,7 +54,6 @@ namespace Tours_Travels
 
                 var newDest = new ModelDest
                 {
-                    // Changed DestName to Name to match your schema
                     Name = Request.Form["DestName"],
                     Tagline = Request.Form["Tagline"],
                     Duration = Request.Form["Duration"],
@@ -65,26 +63,24 @@ namespace Tours_Travels
                     Included = Request.Form["Included"],
                     Price = price,
                     Category = Request.Form["Category"],
-                    MainImage = mainImagePath,
-                    // Changed GalleryImages to Images to match your schema
-                    Images = galleryImagePaths
+                    MainImage = mainImageUrl,
+                    Images = galleryUrls
                 };
 
-                // Use the APIs class to add the destination
                 bool success = await APIs.AddDestination(newDest);
 
                 if (success)
                 {
-                    ShowStatusMessage(true, "<strong>Success!</strong><br>New destination added successfully.");
+                    ShowStatusMessage(true, "Destination added successfully!");
                 }
                 else
                 {
-                    ShowStatusMessage(false, "<strong>Error!</strong><br>Failed to add destination via API.");
+                    ShowStatusMessage(false, "Failed to add destination via API.");
                 }
             }
             catch (Exception ex)
             {
-                ShowStatusMessage(false, $"<strong>Server Error!</strong><br>Could not save files or connect to API. {ex.Message}");
+                ShowStatusMessage(false, "Error: " + ex.Message);
             }
         }
 
@@ -93,13 +89,5 @@ namespace Tours_Travels
             string cssClass = isSuccess ? "status-success" : "status-error";
             StatusLiteral.Text = $"<div class='status-box {cssClass}'>{message}</div>";
         }
-
-        protected void SubmitBtn_Click(object sender, EventArgs e)
-        {
-            // This method is required for the OnClick event, 
-            // but PageAsyncTask handles the actual async logic.
-        }
     }
 }
-
-

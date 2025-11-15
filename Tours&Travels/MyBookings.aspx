@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        /* Existing Styles */
         .hero-section::before {
             content: '';
             position: absolute;
@@ -20,10 +21,10 @@
             border: 1px solid #e5e7eb;
         }
 
-            .booking-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            }
+        .booking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
 
         .status-badge {
             padding: 0.25rem 0.75rem;
@@ -33,7 +34,8 @@
             display: inline-block;
         }
 
-        .cancel-btn {
+        /* New Style for View Details Button (Replaces Cancel Button Style) */
+        .view-details-btn {
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             font-weight: 600;
@@ -43,15 +45,15 @@
             align-items: center;
             gap: 0.5rem;
             border: 1px solid transparent;
-            background-color: #fee2e2; /* red-100 */
-            color: #dc2626; /* red-600 */
+            background-color: #d1fae5; /* A light green background */
+            color: #059669; /* A strong green text color (Emerald 600) */
         }
 
-            .cancel-btn:hover {
-                background-color: #dc2626; /* red-600 */
-                color: white;
-                transform: scale(1.05);
-            }
+        .view-details-btn:hover {
+            background-color: #059669; /* Strong green background on hover */
+            color: white;
+            transform: scale(1.05);
+        }
     </style>
 </asp:Content>
 
@@ -120,7 +122,11 @@
                                             </div>
                                             <div class="mt-auto pt-4 border-t flex justify-between items-center">
                                                 <a href='<%# "ViewDetails.aspx?id=" + Eval("DestinationId") %>' class="font-semibold text-dartmouth-green hover:underline">View Destination Details</a>
-                                                <asp:LinkButton ID="btnCancel" runat="server" CssClass="cancel-btn" OnClick="btnCancel_Click" CommandArgument='<%# Eval("BookingId") %>' OnClientClick="return confirm('Are you sure you want to cancel this booking?');"><i class="las la-times-circle"></i> Cancel Booking</asp:LinkButton>
+                                                
+                                                <!-- REPLACED LinkButton with HyperLink -->
+                                                <asp:HyperLink ID="hlViewBookingDetails" runat="server" CssClass="view-details-btn" NavigateUrl='<%# "ViewBookingDetails.aspx?bookingId=" + Eval("BookingId") %>'>
+                                                    <i class="las la-info-circle"></i> View Booking Details
+                                                </asp:HyperLink>
                                             </div>
                                         </div>
                                     </div>

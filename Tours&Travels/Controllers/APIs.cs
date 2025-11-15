@@ -25,7 +25,6 @@ namespace Tours_Travels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error fetching data: " + ex.Message);
                 return new List<ModelDest>();
             }
         }
@@ -43,7 +42,7 @@ namespace Tours_Travels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error adding destination: " + ex.Message);
+                
                 return false;
             }
         }
@@ -60,7 +59,7 @@ namespace Tours_Travels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error fetching destination by ID: " + ex.Message);
+                
                 return null;
             }
         }
@@ -78,7 +77,7 @@ namespace Tours_Travels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error updating destination: " + ex.Message);
+                
                 return false;
             }
         }
@@ -93,7 +92,7 @@ namespace Tours_Travels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error deleting destination: " + ex.Message);
+               
                 return false;
             }
         }
