@@ -1,0 +1,97 @@
+/* AdminUserManagement.aspx Styles */
+
+.header-section {
+    background: linear-gradient(to right, var(--midnight-green), var(--dartmouth-green));
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+.stat-card-icon {
+    font-size: 2.5rem;
+    color: var(--ecru);
+}
+
+.stat-card-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-card-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.status-completed {
+    background-color: #d1fae5; /* Green-100 */
+    color: #065f46; /* Green-800 */
+}
+
+.status-upcoming {
+    background-color: #dbeafe; /* Blue-100 */
+    color: #1e40af; /* Blue-800 */
+}
+
+.status-cancelled {
+    background-color: #fee2e2; /* Red-100 */
+    color: #991b1b; /* Red-800 */
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px; /* Increased min-width for all columns */
+}
+
+    .data-table th, .data-table td {
+        padding: 1rem 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: middle;
+    }
+
+    .data-table th {
+        background-color: #f9fafb;
+        font-weight: 600;
+        color: #4b5563;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .data-table td {
+        color: #374151;
+    }
+
+    .data-table tbody tr:hover {
+        background-color: #f3f4f6;
+    }

@@ -149,10 +149,7 @@ namespace Tours_Travels
                 DateTime returnDate = travelDate.AddDays(duration);
                 lblReturnDate.Text = returnDate.ToString("dd MMM, yyyy");
 
-                if (bookingStatus.ToLower() == "cancelled" || travelDate < DateTime.Today)
-                {
-                    btnCancel.Visible = false;
-                }
+              
             }
         }
 

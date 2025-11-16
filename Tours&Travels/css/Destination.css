@@ -1,0 +1,515 @@
+/* ============================================
+   DESTINATION.CSS - Destination Pages Styling
+   Pages: Destination.aspx, ViewDetails.aspx
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 110, 79, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   DESTINATION CARDS
+   ============================================ */
+
+.destination-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.destination-card .p-6 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.destination-card .mt-auto {
+    margin-top: auto;
+}
+
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+
+.filter-btn {
+    transition: all 0.3s ease;
+    border: 1px solid var(--dartmouth-green);
+    color: var(--dartmouth-green);
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--dartmouth-green);
+    color: white;
+    transform: scale(1.05);
+}
+
+.filter-btn:focus {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}
+
+.filter-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination-nav-btn {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--dartmouth-green);
+    color: var(--dartmouth-green);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.pagination-nav-btn:hover {
+    background-color: var(--dartmouth-green);
+    color: white;
+}
+
+.pagination-nav-btn:focus {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}
+
+.pagination-nav-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    border-color: #d1d5db;
+    pointer-events: none;
+}
+
+/* ============================================
+   FILTER SECTION
+   ============================================ */
+
+.filter-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.filter-title {
+    font-weight: 600;
+    color: var(--midnight-green);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* ============================================
+   DESTINATION GRID
+   ============================================ */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
+   CARD DETAILS
+   ============================================ */
+
+.destination-title {
+    font-weight: 700;
+    color: var(--midnight-green);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.destination-subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.destination-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.destination-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.destination-meta-icon {
+    color: var(--dartmouth-green);
+}
+
+.destination-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pigment-green);
+}
+
+.destination-price-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* ============================================
+   DETAIL PAGE STYLES
+   ============================================ */
+
+.gallery-container {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.gallery-main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container:hover .gallery-main-image {
+    transform: scale(1.05);
+}
+
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.gallery-thumbnail {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #e5e7eb;
+}
+
+.gallery-thumbnail:hover,
+.gallery-thumbnail.active {
+    border-color: var(--dartmouth-green);
+    transform: scale(1.05);
+}
+
+/* ============================================
+   DETAILS PANEL
+   ============================================ */
+
+.details-panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.detail-group {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.detail-value {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   BOOKING SECTION
+   ============================================ */
+
+.booking-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 2rem;
+}
+
+.booking-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pigment-green);
+    margin-bottom: 0.5rem;
+}
+
+.booking-price-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.booking-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(
+        to right,
+        var(--pigment-green),
+        var(--dartmouth-green)
+    );
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.booking-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.booking-btn:focus {
+    outline: 2px solid var(--pigment-green);
+    outline-offset: 2px;
+}
+
+.booking-btn:disabled {
+    background-image: none;
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   LOADING & EMPTY STATES
+   ============================================ */
+
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #e5e7eb;
+    border-top-color: var(--dartmouth-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+}
+
+.empty-state-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state-text {
+    color: #9ca3af;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .details-panel {
+        padding: 1.5rem;
+    }
+
+    .booking-card {
+        position: relative;
+        top: auto;
+        margin-top: 1.5rem;
+    }
+
+    .gallery-main-image {
+        height: 300px;
+    }
+
+    .destination-title {
+        font-size: 1.125rem;
+    }
+
+    .destination-price {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-thumbnail {
+        height: 60px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .destination-card,
+    .gallery-main-image,
+    .filter-btn,
+    .booking-btn {
+        transition: none;
+    }
+
+    .loading-spinner {
+        animation: none;
+    }
+}

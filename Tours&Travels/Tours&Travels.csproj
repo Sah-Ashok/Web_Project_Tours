@@ -97,7 +97,37 @@
       <DependentUpon>ToursTravels.mdf</DependentUpon>
     </Content>
     <Content Include="bookingConfirmation.aspx" />
+    <Content Include="BulkMessage.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="css\About.css" />
+    <Content Include="css\AddDest.css" />
+    <Content Include="css\AddDestinations.css" />
+    <Content Include="css\Admin.css" />
+    <Content Include="css\AdminUserManagement.css" />
+    <Content Include="css\AdminUserView.css" />
+    <Content Include="css\Auth.css" />
+    <Content Include="css\BackToTop.css" />
+    <Content Include="css\blog.css" />
+    <Content Include="css\Booking.css" />
+    <Content Include="css\Contact.css" />
+    <Content Include="css\Deals.css" />
+    <Content Include="css\Destination.css" />
+    <Content Include="css\DestinationsPremium.css" />
+    <Content Include="css\DestinationsSection.css" />
+    <Content Include="css\Home.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\login_premium.css" />
+    <Content Include="css\MyBookings.css" />
+    <Content Include="css\Privacy.css" />
+    <Content Include="css\Profile.css" />
+    <Content Include="css\Register.css" />
+    <Content Include="css\ResetPassword.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\Terms.css" />
+    <Content Include="css\ThankYou.css" />
+    <Content Include="css\UltraModernHero.css" />
+    <Content Include="css\User.css" />
+    <Content Include="css\ViewDetails.css" />
     <Content Include="Destination.aspx" />
     <Content Include="ForgetPassword.aspx" />
     <Content Include="Home.aspx" />
@@ -106,6 +136,7 @@
     <Content Include="PaymentVerificationSuccess.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="ReportViewer.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="ViewBookingDetails.aspx" />
     <Content Include="ViewDetails.aspx" />
@@ -146,6 +177,13 @@
     <Compile Include="AdminUserView.aspx.designer.cs">
       <DependentUpon>AdminUserView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BulkMessage.aspx.cs">
+      <DependentUpon>BulkMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkMessage.aspx.designer.cs">
+      <DependentUpon>BulkMessage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\APIs.cs" />
     <Compile Include="bookingConfirmation.aspx.cs">
       <DependentUpon>bookingConfirmation.aspx</DependentUpon>
@@ -174,6 +212,13 @@
     </Compile>
     <Compile Include="PaymentVerificationSuccess.aspx.designer.cs">
       <DependentUpon>PaymentVerificationSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="ForgetPassword.aspx.cs">
@@ -251,6 +296,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\login.css.backup" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">

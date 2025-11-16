@@ -1,0 +1,301 @@
+/* ============================================
+   AUTH.CSS - Authentication Pages Styling
+   Pages: Login, Register, ForgetPassword, ResetPassword
+   ============================================ */
+
+/* ============================================
+   LOGIN & REGISTER FORM STYLING
+   ============================================ */
+
+.login-gradient-overlay {
+    background: rgba(7, 59, 58, 0.65);
+    z-index: 10;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+}
+
+.login-card:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+.login-btn {
+    background-image: linear-gradient(
+        to right,
+        var(--pigment-green) 0%,
+        var(--dartmouth-green) 100%
+    );
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.login-btn:active {
+    transform: translateY(-1px);
+}
+
+.login-btn:focus {
+    outline: 2px solid var(--pigment-green);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   FORM INPUT STYLING
+   ============================================ */
+
+.form-input {
+    background-color: #f3f4f6;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+    .form-input {
+        font-size: 1rem;
+    }
+}
+
+.form-input:focus {
+    background-color: white;
+    border-color: var(--dartmouth-green);
+    box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.2);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:disabled {
+    background-color: #f9fafb;
+    color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* File upload styling */
+input[type="file"] {
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 0.5rem 0;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    background-color: #eee5ff;
+    color: #7c3aed;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #7c3aed;
+    color: white;
+}
+
+/* ============================================
+   FORGET PASSWORD & RESET PASSWORD FORMS
+   ============================================ */
+
+.form-container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.form-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input-wrapper .form-icon {
+    position: absolute;
+    left: 1rem;
+    color: #9ca3af;
+    font-size: 1.25rem;
+    pointer-events: none;
+}
+
+.form-input-wrapper .form-input {
+    padding-left: 3rem;
+    border-radius: 9999px;
+    width: 100%;
+}
+
+.form-input-wrapper .form-input:focus {
+    box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.2);
+}
+
+/* ============================================
+   SUBMIT BUTTON (FORGET/RESET PASSWORD)
+   ============================================ */
+
+.submit-btn {
+    background-color: var(--dartmouth-green);
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 9999px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.submit-btn:hover {
+    background-color: var(--midnight-green);
+    transform: scale(1.02);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.2);
+}
+
+.submit-btn:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   FORM LABELS
+   ============================================ */
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Checkbox styling */
+.form-checkbox {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    accent-color: var(--dartmouth-green);
+}
+
+.form-checkbox:hover {
+    border-color: var(--dartmouth-green);
+}
+
+.form-checkbox:checked {
+    background-color: var(--dartmouth-green);
+    border-color: var(--dartmouth-green);
+}
+
+/* ============================================
+   FORM SPACING
+   ============================================ */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-input-wrapper .form-icon {
+        font-size: 1rem;
+        left: 0.75rem;
+    }
+
+    .form-input-wrapper .form-input {
+        padding-left: 2.5rem;
+    }
+}
+
+/* ============================================
+   ANIMATION
+   ============================================ */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card[data-aos="fade-up"] {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+.login-btn:focus-visible,
+.form-input:focus-visible,
+.submit-btn:focus-visible {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}

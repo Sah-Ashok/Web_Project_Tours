@@ -1,0 +1,83 @@
+/* AdminUserView.aspx Styles */
+
+/* Custom Colors based on the inferred palette (using variables just for clarity) */
+:root {
+    --midnight-green: #0a4f3b; /* A deep, rich green */
+    --dartmouth-green: #0b6e4f; /* A strong, primary green */
+    --pigment-green: #2a9d8f; /* Lighter accent green */
+    --ecru: #f4e8c1; /* Light contrast color */
+}
+
+.heading-font {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Replicating the header background from your ASPX */
+.header-section {
+    background: linear-gradient(to right, var(--midnight-green), var(--dartmouth-green));
+}
+
+/* Custom styles to handle responsive table layout on mobile */
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+}
+
+.status-Completed {
+    background-color: #d1fae5; /* Green-100 */
+    color: #065f46; /* Green-800 */
+}
+
+.status-Pending {
+    background-color: #fef3c7; /* Yellow-100 */
+    color: #b45309; /* Amber-800 */
+}
+
+.status-Cancelled {
+    background-color: #fee2e2; /* Red-100 */
+    color: #991b1b; /* Red-800 */
+}
+
+@media (max-width: 768px) {
+    .booking-table {
+        min-width: 100%;
+    }
+
+        .booking-table thead {
+            display: none;
+        }
+
+        .booking-table, .booking-table tbody, .booking-table tr, .booking-table td {
+            display: block;
+            width: 100%;
+        }
+
+            .booking-table tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            }
+
+            .booking-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid #f3f4f6;
+                text-align: right;
+            }
+
+                .booking-table td:last-child {
+                    border-bottom: none;
+                }
+
+                .booking-table td[data-label]::before {
+                    content: attr(data-label);
+                    font-weight: 600;
+                    text-align: left;
+                    margin-right: 1rem;
+                    color: #4b5563;
+                }
+}

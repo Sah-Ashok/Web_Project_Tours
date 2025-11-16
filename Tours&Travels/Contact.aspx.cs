@@ -24,7 +24,7 @@ namespace Tours_Travels
             con.Open();
         }
 
-        protected void btnSendMessage_Click(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
             GetCon();
             if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSubject.Text) || string.IsNullOrEmpty(txtMessage.Text))
@@ -86,5 +86,7 @@ namespace Tours_Travels
                 lblMessage.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        
     }
 }

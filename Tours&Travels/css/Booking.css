@@ -1,0 +1,578 @@
+/* ============================================
+   BOOKING.CSS - Booking Pages Styling
+   Pages: bookingConfirmation.aspx, ThankYou.aspx
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 110, 79, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   BOOKING FORM STYLING
+   ============================================ */
+
+.booking-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 1.5rem;
+    }
+}
+
+/* ============================================
+   FORM GROUP & INPUTS
+   ============================================ */
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-input {
+    transition: all 0.3s ease;
+    border: 2px solid #d1d5db;
+    background-color: #f9fafb;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    border-color: var(--dartmouth-green);
+    box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.2);
+    outline: none;
+    background-color: white;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:disabled {
+    background-color: #f3f4f6;
+    color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* Date picker specific */
+input[type="date"],
+input[type="time"] {
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    color: var(--dartmouth-green);
+}
+
+/* ============================================
+   FORM LABELS WITH FLOATING EFFECT
+   ============================================ */
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.75rem;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    color: var(--text-light);
+    background-color: #f9fafb;
+    padding: 0 4px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    left: 1rem;
+    font-size: 0.75rem;
+    color: var(--dartmouth-green);
+    font-weight: 600;
+    background-color: #f9fafb;
+}
+
+/* ============================================
+   QUANTITY CONTROLS
+   ============================================ */
+
+.quantity-btn {
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.2s;
+    border: 1px solid #d1d5db;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-btn:hover {
+    background-color: #e5e7eb;
+    border-color: var(--dartmouth-green);
+}
+
+.quantity-btn:active {
+    background-color: #d1d5db;
+}
+
+.quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantity-display {
+    text-align: center;
+    font-weight: 600;
+    min-width: 2rem;
+    color: #374151;
+}
+
+/* ============================================
+   TRAVELER INFO CARDS
+   ============================================ */
+
+.traveler-info-card {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+}
+
+.traveler-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.traveler-title {
+    font-weight: 600;
+    color: var(--midnight-green);
+    font-size: 1rem;
+}
+
+/* ============================================
+   BOOKING SUMMARY
+   ============================================ */
+
+.booking-summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .booking-summary {
+        position: relative;
+        top: auto;
+        margin-top: 1.5rem;
+    }
+}
+
+.summary-title {
+    font-weight: 700;
+    color: var(--midnight-green);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.summary-row.total {
+    border-top: 2px solid #e5e7eb;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--midnight-green);
+}
+
+.summary-value {
+    font-weight: 600;
+    color: #374151;
+}
+
+.summary-row.total .summary-value {
+    color: var(--pigment-green);
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   SECTION BREAKDOWN
+   ============================================ */
+
+.price-breakdown {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--dartmouth-green);
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.breakdown-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   PAYMENT BUTTONS
+   ============================================ */
+
+.booking-btn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-image: linear-gradient(
+        to right,
+        var(--pigment-green),
+        var(--dartmouth-green)
+    );
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.booking-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.booking-btn:focus {
+    outline: 2px solid var(--pigment-green);
+    outline-offset: 2px;
+}
+
+.booking-btn:active {
+    transform: translateY(-1px);
+}
+
+.booking-btn:disabled {
+    background-image: none;
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-image: none;
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* ============================================
+   CONFIRMATION PAGE (THANK YOU)
+   ============================================ */
+
+.thank-you-container {
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--pigment-green), var(--dartmouth-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 3rem;
+    color: white;
+    box-shadow: 0 10px 25px rgba(8, 160, 69, 0.3);
+}
+
+.thank-you-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--midnight-green);
+    margin-bottom: 1rem;
+}
+
+.thank-you-message {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.confirmation-details {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.detail-value {
+    color: #4b5563;
+    text-align: right;
+}
+
+.next-steps {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 2px solid #e5e7eb;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    font-weight: 700;
+    color: var(--midnight-green);
+    margin-bottom: 1rem;
+}
+
+.next-steps ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+}
+
+.next-steps li {
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* ============================================
+   ACTION BUTTONS
+   ============================================ */
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-link {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-image: linear-gradient(
+        to right,
+        var(--pigment-green),
+        var(--dartmouth-green)
+    );
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.btn-link {
+    background: transparent;
+    color: var(--dartmouth-green);
+    border: 2px solid var(--dartmouth-green);
+}
+
+.btn-link:hover {
+    background-color: var(--dartmouth-green);
+    color: white;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 1rem;
+    }
+
+    .booking-summary {
+        padding: 1.5rem;
+    }
+
+    .confirmation-details {
+        padding: 1.5rem;
+    }
+
+    .thank-you-title {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-message {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .form-input {
+        padding: 0.6rem 0.875rem;
+        font-size: 16px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-link {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.booking-form-container,
+.booking-summary {
+    animation: slideIn 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .booking-btn,
+    .form-input,
+    .quantity-btn {
+        transition: none;
+    }
+}
