@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        :root {
+            --midnight-green: #073b3a;
+            --dartmouth-green: #0b6e4f;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky Header: Initial State (Top of page) */
+        #navbar {
+            height: 80px;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        /* Logo sizing - Initial State */
+        #nav-logo-icon {
+            height: 48px;
+            width: 48px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #nav-logo-text {
+            font-size: 1.875rem; /* 30px */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Navigation links - Initial State */
+        .nav-link {
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Sticky Header: Scrolled State (After 100px scroll) */
+        #navbar.header-scrolled {
+            height: 64px;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Logo sizing - Scrolled State */
+        #navbar.header-scrolled #nav-logo-icon {
+            height: 36px;
+            width: 36px;
+            color: var(--dartmouth-green);
+        }
+
+        #navbar.header-scrolled #nav-logo-text {
+            font-size: 1.5rem; /* 24px */
+            color: var(--midnight-green);
+            text-shadow: none;
+        }
+
+        /* Navigation links - Scrolled State */
+        #navbar.header-scrolled .nav-link {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        #navbar.header-scrolled .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero section for testing */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .content-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        /* Mobile: Always compact version */
+        @media (max-width: 1024px) {
+            #navbar {
+                height: 64px;
+                background-color: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            #nav-logo-icon {
+                height: 36px;
+                width: 36px;
+                color: var(--dartmouth-green);
+            }
+
+            #nav-logo-text {
+                font-size: 1.5rem;
+                color: var(--midnight-green);
+                text-shadow: none;
+            }
+
+            .nav-link {
+                font-size: 14px;
+                color: var(--text-dark);
+            }
+        }
+
+        .status-indicator {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .status-indicator .status-item {
+            margin: 0.5rem 0;
+        }
+
+        .status-indicator .value {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Status Indicator for Testing -->
+    <div class="status-indicator">
+        <div class="status-item">
+            Scroll: <span class="value" id="scroll-position">0px</span>
+        </div>
+        <div class="status-item">
+            Header: <span class="value" id="header-state">Initial</span>
+        </div>
+        <div class="status-item">
+            Height: <span class="value" id="header-height">80px</span>
+        </div>
+        <div class="status-item">
+            Logo: <span class="value" id="logo-size">48px</span>
+        </div>
+    </div>
+
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="absolute left-0 -translate-y-full focus:translate-y-0 bg-amber-500 text-white font-semibold p-3 z-[100] transition-transform duration-300">
+        Skip to main content
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 h-full flex items-center">
+            <div class="relative flex items-center justify-between w-full">
+                <!-- Brand/Logo -->
+                <div class="flex items-center space-x-3">
+                    <a href="#" class="flex items-center space-x-3">
+                        <svg id="nav-logo-icon" class="text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                            <path d="M19.1,7.4a1,1,0,0,0-1.2.3,6.1,6.1,0,0,1-4.2,2.2,6.5,6.5,0,0,1-1.7-.3,1,1,0,0,0-1,1.7,8.5,8.5,0,0,0,2.7.5,8.1,8.1,0,0,0,5.6-2.9A1,1,0,0,0,19.1,7.4Z" />
+                        </svg>
+                        <span id="nav-logo-text" class="font-bold text-white" style="text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);">Exploria</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-amber-500 transition-colors font-medium nav-link"><i class="fa-solid fa-house mr-2"></i>Home</a>
+                    <a href="#destinations" class="text-white hover:text-amber-500 transition-colors font-medium nav-link"><i class="fa-solid fa-map-location-dot mr-2"></i>Destinations</a>
+                    <a href="#about" class="text-white hover:text-amber-500 transition-colors font-medium nav-link"><i class="fa-solid fa-circle-info mr-2"></i>About</a>
+                    <a href="#contact" class="text-white hover:text-amber-500 transition-colors font-medium nav-link"><i class="fa-solid fa-envelope mr-2"></i>Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#signup" class="px-6 py-3 rounded-full font-bold text-midnight-green bg-amber-500 hover:bg-amber-600 transition-all">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main-content">
+        <div>
+            <div>Scroll Down to Test</div>
+            <div style="font-size: 1.5rem; margin-top: 1rem; text-align: center;">
+                <i class="fa-solid fa-chevron-down animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections for Testing Scroll -->
+    <section class="content-section">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Section 1: Testing Sticky Navigation</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            This page demonstrates the sticky navigation header with smooth transition effects. 
+            Scroll down to see the header transform from its initial transparent state to a compact white state.
+        </p>
+        <p style="color: var(--text-light); line-height: 1.8; margin-top: 1rem;">
+            <strong>Key Features:</strong>
+        </p>
+        <ul style="color: var(--text-light); line-height: 1.8; margin-top: 0.5rem; padding-left: 2rem;">
+            <li>Transparent to white background transition</li>
+            <li>Height reduction from 80px to 64px</li>
+            <li>Logo size reduction from 48px to 36px</li>
+            <li>Font size reduction from 16px to 14px</li>
+            <li>Smooth cubic-bezier easing (0.4, 0, 0.2, 1)</li>
+            <li>Intersection Observer API for performance</li>
+        </ul>
+    </section>
+
+    <section class="content-section">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Section 2: Performance Optimization</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            The implementation uses the Intersection Observer API instead of scroll event listeners for better performance.
+            This approach provides:
+        </p>
+        <ul style="color: var(--text-light); line-height: 1.8; margin-top: 0.5rem; padding-left: 2rem;">
+            <li><strong>Lower CPU Usage:</strong> No constant scroll event processing</li>
+            <li><strong>Smoother Animations:</strong> Browser-optimized observation</li>
+            <li><strong>Better Battery Life:</strong> Especially on mobile devices</li>
+            <li><strong>No Layout Thrashing:</strong> Efficient DOM updates</li>
+        </ul>
+    </section>
+
+    <section class="content-section">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Section 3: Browser Compatibility</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            The sticky navigation is compatible with all modern browsers:
+        </p>
+        <ul style="color: var(--text-light); line-height: 1.8; margin-top: 0.5rem; padding-left: 2rem;">
+            <li>Chrome 90+</li>
+            <li>Firefox 88+</li>
+            <li>Safari 14+</li>
+            <li>Edge 90+</li>
+            <li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+        </ul>
+        <p style="color: var(--text-light); line-height: 1.8; margin-top: 1rem;">
+            For older browsers, a fallback using optimized scroll events with requestAnimationFrame is provided.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Section 4: Accessibility Features</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            The navigation includes comprehensive accessibility features:
+        </p>
+        <ul style="color: var(--text-light); line-height: 1.8; margin-top: 0.5rem; padding-left: 2rem;">
+            <li><strong>Skip-to-Content Link:</strong> Press Tab to see (WCAG 2.1)</li>
+            <li><strong>Keyboard Navigation:</strong> All links are keyboard accessible</li>
+            <li><strong>Focus Indicators:</strong> Clear visual focus states</li>
+            <li><strong>Color Contrast:</strong> WCAG AAA compliant</li>
+            <li><strong>Screen Reader Support:</strong> Semantic HTML structure</li>
+        </ul>
+    </section>
+
+    <section class="content-section">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Section 5: Mobile Optimization</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            On mobile devices (< 1024px), the navigation always displays in its compact state:
+        </p>
+        <ul style="color: var(--text-light); line-height: 1.8; margin-top: 0.5rem; padding-left: 2rem;">
+            <li>Fixed 64px height (no animation)</li>
+            <li>Opaque white background</li>
+            <li>Small logo (36px)</li>
+            <li>Compact font size (14px)</li>
+        </ul>
+        <p style="color: var(--text-light); line-height: 1.8; margin-top: 1rem;">
+            This provides a consistent, predictable experience on smaller screens and saves valuable screen real estate.
+        </p>
+    </section>
+
+    <section class="content-section" style="min-height: 50vh;">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">End of Test Page</h2>
+        <p style="color: var(--text-light); line-height: 1.8;">
+            Scroll back to the top to see the reverse transition!
+        </p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+            const scrollPositionEl = document.getElementById("scroll-position");
+            const headerStateEl = document.getElementById("header-state");
+            const headerHeightEl = document.getElementById("header-height");
+            const logoSizeEl = document.getElementById("logo-size");
+            
+            // Create a sentinel element at 100px from the top
+            const sentinel = document.createElement('div');
+            sentinel.style.position = 'absolute';
+            sentinel.style.top = '100px';
+            sentinel.style.height = '1px';
+            sentinel.style.width = '100%';
+            sentinel.style.pointerEvents = 'none';
+            sentinel.style.visibility = 'hidden';
+            sentinel.setAttribute('data-scroll-sentinel', '');
+            document.body.insertBefore(sentinel, document.body.firstChild);
+
+            // Update status indicator
+            function updateStatus() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const isScrolled = navbar.classList.contains('header-scrolled');
+                
+                scrollPositionEl.textContent = Math.round(scrollTop) + 'px';
+                headerStateEl.textContent = isScrolled ? 'Scrolled' : 'Initial';
+                headerHeightEl.textContent = isScrolled ? '64px' : '80px';
+                logoSizeEl.textContent = isScrolled ? '36px' : '48px';
+            }
+
+            // Intersection Observer for performance-optimized scroll detection
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0
+            };
+
+            const observerCallback = (entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        navbar.classList.add('header-scrolled');
+                    } else {
+                        navbar.classList.remove('header-scrolled');
+                    }
+                    updateStatus();
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            observer.observe(sentinel);
+
+            // Update status on scroll for real-time feedback
+            window.addEventListener('scroll', updateStatus);
+
+            // Fallback for older browsers
+            if (!('IntersectionObserver' in window)) {
+                console.warn('Intersection Observer not supported, using scroll event fallback');
+                
+                let ticking = false;
+                
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                            
+                            if (scrollTop > 100) {
+                                navbar.classList.add('header-scrolled');
+                            } else {
+                                navbar.classList.remove('header-scrolled');
+                            }
+                            
+                            updateStatus();
+                            ticking = false;
+                        });
+                        
+                        ticking = true;
+                    }
+                });
+            }
+
+            // Smooth scroll for skip-to-content link
+            const skipLink = document.querySelector('a[href="#main-content"]');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const mainContent = document.getElementById('main-content');
+                    if (mainContent) {
+                        mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

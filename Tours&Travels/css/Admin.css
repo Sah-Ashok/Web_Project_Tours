@@ -1,0 +1,609 @@
+/* ============================================
+   ADMIN.CSS - Admin Pages Styling
+   Pages: AddDestinations.aspx, AdminDestinations.aspx, 
+          AdminUserManagement.aspx, AdminUserView.aspx
+   ============================================ */
+
+/* ============================================
+   COLOR VARIABLES
+   ============================================ */
+
+:root {
+    --midnight-green: #073b3a;
+    --dartmouth-green: #0b6e4f;
+    --pigment-green: #08a045;
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
+.header-section {
+    background: linear-gradient(to right, var(--midnight-green), var(--dartmouth-green));
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        padding: 2rem 1rem;
+    }
+
+    .header-section h1 {
+        font-size: 1.875rem;
+    }
+}
+
+.header-section p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   TABLE STYLING
+   ============================================ */
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.data-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #374151;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table td {
+    color: #4b5563;
+}
+
+/* ============================================
+   TABLE IMAGE THUMBNAILS
+   ============================================ */
+
+.dest-image-thumb {
+    width: 96px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ACTION BUTTONS
+   ============================================ */
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.action-btn i {
+    font-size: 1rem;
+}
+
+/* Edit button */
+.edit-btn {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.edit-btn:hover {
+    background-color: #4f46e5;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
+}
+
+.delete-btn:focus,
+.edit-btn:focus {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   ADD NEW BUTTON
+   ============================================ */
+
+.add-new-btn {
+    background-image: linear-gradient(
+        to right,
+        var(--pigment-green),
+        var(--dartmouth-green)
+    );
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.add-new-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-new-btn:focus {
+    outline: 2px solid var(--pigment-green);
+    outline-offset: 2px;
+}
+
+.add-new-btn i {
+    font-size: 1.25rem;
+}
+
+/* ============================================
+   MODAL STYLING
+   ============================================ */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 24, 39, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.modal-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background-color: #fee2e2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: var(--midnight-green);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.modal-text {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.modal-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+}
+
+.modal-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.modal-btn-cancel {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.modal-btn-cancel:hover:not(:disabled) {
+    background-color: #d1d5db;
+}
+
+.modal-btn-confirm {
+    background-color: #dc2626;
+    color: white;
+}
+
+.modal-btn-confirm:hover:not(:disabled) {
+    background-color: #b91c1c;
+}
+
+.modal-btn:focus {
+    outline: 2px solid var(--dartmouth-green);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-data-container {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #6b7280;
+    background: white;
+    border-radius: 0.75rem;
+    border: 2px dashed #e5e7eb;
+}
+
+.empty-data-icon {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    color: #d1d5db;
+}
+
+.empty-data-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #374151;
+}
+
+.empty-data-text {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+
+.spinner {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 2px solid #fff;
+    border-right: 2px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   MESSAGE BANNER
+   ============================================ */
+
+.message-banner {
+    display: none;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-banner.success {
+    display: flex;
+    background-color: #d1fae5;
+    border-color: #6ee7b7;
+    color: #065f46;
+}
+
+.message-banner.error {
+    display: flex;
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+.message-banner.warning {
+    display: flex;
+    background-color: #fef3c7;
+    border-color: #fcd34d;
+    color: #92400e;
+}
+
+.message-banner.info {
+    display: flex;
+    background-color: #dbeafe;
+    border-color: #93c5fd;
+    color: #1e40af;
+}
+
+.message-icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   FORM STYLING
+   ============================================ */
+
+.admin-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .admin-form-container {
+        padding: 1.5rem;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: var(--dartmouth-green);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.1);
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* ============================================
+   STATISTICS CARDS
+   ============================================ */
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--midnight-green);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: var(--dartmouth-green);
+    opacity: 0.2;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .data-table {
+        font-size: 0.875rem;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .action-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .dest-image-thumb {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .data-table {
+        min-width: 600px;
+    }
+
+    .modal-box {
+        padding: 1.5rem;
+        max-width: 95vw;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-overlay,
+    .message-banner,
+    .stat-card,
+    .action-btn,
+    .add-new-btn {
+        transition: none;
+        animation: none;
+    }
+}

@@ -1,0 +1,42 @@
+/* ============================================
+   BACK TO TOP BUTTON STYLES
+   ============================================ */
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #c9a877; /* Gold color */
+    color: #1d5e33; /* Dark green color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    border: 2px solid #1d5e33;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top-btn:hover {
+    background-color: #1d5e33;
+    color: #c9a877;
+    transform: translateY(-5px);
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn svg {
+    width: 24px;
+    height: 24px;
+}

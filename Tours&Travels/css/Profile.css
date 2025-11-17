@@ -1,0 +1,108 @@
+/* Profile.aspx Styles */
+
+.profile-header {
+    background: linear-gradient(to right, var(--midnight-green), var(--dartmouth-green));
+}
+
+.profile-card {
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+}
+
+.profile-nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: #4b5563; /* text-gray-600 */
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+
+.profile-nav-link i {
+    margin-right: 1rem;
+}
+
+.profile-nav-link:hover {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: var(--midnight-green);
+}
+
+.profile-nav-link.active {
+    background-color: #eef8f4; /* A light green */
+    color: var(--dartmouth-green);
+    border-left-color: var(--dartmouth-green);
+}
+
+.tab-content { display: none; }
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-label {
+    font-weight: 600;
+    color: #374151; /* text-gray-700 */
+}
+
+.form-input-view {
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+}
+
+.form-input-edit {
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    width: 100%;
+}
+
+.form-input-edit:focus {
+    border-color: var(--dartmouth-green);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(11, 110, 79, 0.2);
+}
+
+.wishlist-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.remove-wishlist-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #ef4444; /* text-red-500 */
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.wishlist-card:hover .remove-wishlist-btn { opacity: 1; }
+
+.remove-wishlist-btn:hover {
+    background-color: #ef4444; /* bg-red-500 */
+    color: white;
+    transform: scale(1.1);
+}
